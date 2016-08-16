@@ -1,5 +1,5 @@
 from django.test import TestCase
-from backend.core.models import City
+from model_mommy import mommy
 from .models import Report
 
 
@@ -10,13 +10,16 @@ class ReportTest(TestCase):
 
 class ReportModelTest(TestCase):
     def setUp(self):
-        self.city = City.objects.create(name='Bom Despacho', state='MG')
-        self.report = Report.objects.create(city=self.city, address='Av. Maria da Conceição Del Duca',
-                                            district='Jaraguá', landmark='SESC',
-                                            description='Ao lado direito do SESC está um pneu cheio de água parada')
+        self.report = mommy.make_one(Report, city__name='Bom Despacho')
 
     def test_has_created(self):
         """
         Report instance must be created in the database
         """
-        self.assertTrue(Report.objects.get(pk=self.report.pk))
+        self.assertIsInstance(self.report, Report)
+
+    def test_report_has_city(self):
+        """
+        Report instance must be have a city and state associated
+        """
+        self.assertTrue(self.report.city.name == 'Bom Despacho' and self.report.city.state)
