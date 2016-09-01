@@ -1,0 +1,22 @@
+*,
+*:after,
+*:before{
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 20px;
+}
+
+body {
+  padding: 10px;
+  font-size: 20px;
+  background: #2c3e50;
+
+  @media(orientation: landscape) and (min-width: 768px) {
+    background: red;
+  }
+}
+
+/* Component card */
+@import "card/card.scss";

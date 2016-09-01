@@ -2,4 +2,5 @@ from django.apps import AppConfig
 
 
 class ReportsConfig(AppConfig):
-    name = 'reports'
+    name = 'backend.reports'
+    verbose_name = 'Controle de Denúncias'

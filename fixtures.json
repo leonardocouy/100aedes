@@ -1,0 +1,72 @@
+[
+  {
+    "model": "core.city",
+    "pk": 1,
+    "fields": {
+      "name": "Bom Despacho",
+      "state": "MG"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "reports",
+      "model": "report"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can view reports",
+      "content_type": 7,
+      "codename": "can_view_reports"
+    }
+  },
+  {
+    "model": "auth.group",
+    "pk": 1,
+    "fields": {
+      "name": "Agente",
+      "permissions": [
+        25
+      ]
+    }
+  },
+  {
+    "model": "auth.group",
+    "pk": 2,
+    "fields": {
+      "name": "Coordenador",
+      "permissions": [
+        22,
+        23,
+        24,
+        19,
+        20,
+        21
+      ]
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$30000$r957Le3mYjC9$QCVDPxEI5tbzk5+qJfGVIRgUjl9+nwD3cJCmDInSrgA=",
+      "last_login": "2016-08-27T17:03:36.334Z",
+      "is_superuser": true,
+      "username": "leo",
+      "first_name": "Leonardo",
+      "last_name": "Flores",
+      "email": "leo@leo.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2016-08-27T17:01:45.817Z",
+      "city": 1,
+      "user_type": 0,
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+ ]

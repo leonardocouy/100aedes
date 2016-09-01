@@ -1,0 +1,36 @@
+{% extends "admin/change_form.html" %}
+
+{% block object-tools %}
+  {% if not request.user.is_superuser and perms.reports.can_view_reports %}
+  {% else %}
+  {{ block.super }}
+  {% endif %}
+{% endblock%}
+
+{% block submit_buttons_bottom %}
+  {% if not request.user.is_superuser and perms.reports.can_view_reports %}
+    <div class="submit-row">
+      <input type="button" value="Voltar" class="default" onClick="javascript:history.go(-1);" />
+    </div>
+  {% else %}
+  {{ block.super }}
+  {% endif %}
+{% endblock %}
+
+{% block title %}
+  {% if not request.user.is_superuser and perms.reports.can_view_reports %}
+    Ver Denúncia
+  {% else %}
+    {{ block.super }}
+  {% endif %}
+{% endblock %}
+
+{% block content_title %}
+  {% if not request.user.is_superuser and perms.reports.can_view_reports %}
+    <div id="title">
+    <h1><strong>Ver Denúncia</strong> (Você pode somente visualizar as denúncias)</h1>
+</div>
+  {% else %}
+    {{ block.super }}
+  {% endif %}
+{% endblock %}

@@ -13,17 +13,10 @@ Including another URLconf
     1. Add an import:  from blog import urls as blog_urls
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
-from django.conf.urls import include, url
-from django.contrib import admin
-from backend.core import urls as core_urls
-from backend.reports import urls as reports_urls
-from backend.accounts import urls as users_urls
+from django.conf.urls import url
+from . import views
 
 urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^', include(core_urls)),
-
-    # API's
-    url(r'^api/v1/reports/', include(reports_urls)),
-    url(r'^api/v1/users/', include(users_urls))
+    url(r'^$', views.ReportCreateReadView.as_view(), name='report-list'),
+    url(r'^(?P<pk>[0-9]+)$', views.ReportReadUpdateDelete.as_view(), name='report-detail')
 ]

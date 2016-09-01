@@ -1,17 +1,6 @@
 from django.test import TestCase
 from model_mommy import mommy
-from .models import City
-
-
-class HomeTest(TestCase):
-    def setUp(self):
-        self.resp = self.client.get('/')
-
-    def test_get(self):
-        """
-        GET / must return status code 200
-        """
-        self.assertEqual(200, self.resp.status_code)
+from ..models import City
 
 
 class CityModelTest(TestCase):

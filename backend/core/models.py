@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
-CITY_STATES_CHOICES = {
+CITY_STATES_CHOICES = (
     ('AC', 'Acre'),
     ('AL', 'Alagoas'),
     ('AP', 'Amapá'),
@@ -29,12 +29,12 @@ CITY_STATES_CHOICES = {
     ('SP', 'São Paulo'),
     ('SE', 'Sergipe'),
     ('TO', 'Tocantins')
-}
+)
 
 
 class City(models.Model):
-    name = models.CharField(max_length=255, blank=False)
-    state = models.CharField(max_length=2, choices=CITY_STATES_CHOICES)
+    name = models.CharField('Nome da Cidade', max_length=255, blank=False)
+    state = models.CharField('Estado', max_length=2, choices=CITY_STATES_CHOICES)
 
     def __str__(self):
         return '%s/%s' % (self.name, self.state)
@@ -42,3 +42,4 @@ class City(models.Model):
     class Meta:
         verbose_name = _('Cidade')
         verbose_name_plural = _('Cidades')
+

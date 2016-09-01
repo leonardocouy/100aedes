@@ -1,0 +1,9 @@
+@import "variables.scss";
+
+@mixin card-custom($name, $color){
+  &.card-#{$name}{
+    .card-header{
+      background: $color;
+    }
+  }
+}
