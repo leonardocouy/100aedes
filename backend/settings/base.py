@@ -14,6 +14,11 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 import os
 from decouple import config, Csv
 
+try:
+    import pymysql
+    pymysql.install_as_MySQLdb()
+except ImportError:
+    pass
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_DIR = os.path.join(os.path.dirname(__file__))
