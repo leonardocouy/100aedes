@@ -137,7 +137,7 @@ STATIC_URL = '/static/'
 # django-compressor settings
 
 COMPRESS_ENABLED = True
-COMPRESS_OFFLINE = False # true if in production
+COMPRESS_OFFLINE = config('COMPRESS_OFFLINE', default=False, cast=bool) # true if in production
 COMPRESS_PRECOMPILERS = (
     ('text/x-scss', 'sassc {infile} {outfile}'),
 )
