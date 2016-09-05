@@ -1,4 +1,4 @@
-from .base import *
+xfrom .base import *
 
 
 INSTALLED_APPS += (
