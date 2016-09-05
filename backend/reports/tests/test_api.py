@@ -104,9 +104,9 @@ class CreateInvalidReportApiTest(APITestCase):
 class ReadReportApiTest(APITestCase):
     def setUp(self):
         user = mommy.make_recipe('backend.core.user')
-        self.login = self.client.login(username=user.username, password='leo')
-        mommy.make_one(Report, description='have things here', user=user)
-        mommy.make_one(Report, description='have two things here', user=user)
+        self.client.login(username=user.username, password='leo')
+        self.report1 = mommy.make_one(Report, description='have things here', user=user)
+        self.report2 = mommy.make_one(Report, description='have two things here', user=user)
 
     def test_read_report_list(self):
         """
@@ -116,8 +116,8 @@ class ReadReportApiTest(APITestCase):
         """
         response = self.client.get(reverse('report-list'))
         self.assertEqual(200, response.status_code)
-        self.assertContains(response, "have things here")
-        self.assertContains(response, "have two things here")
+        self.assertContains(response, self.report1.description)
+        self.assertContains(response, self.report2.description)
 
     def test_read_valid_report_details(self):
         """
@@ -125,9 +125,9 @@ class ReadReportApiTest(APITestCase):
         Must return status code 200 OK and
         check if reports are being shown
         """
-        response = self.client.get(reverse('report-detail', kwargs={'pk': 1}))
+        response = self.client.get(reverse('report-detail', kwargs={'pk': self.report1.pk}))
         self.assertEqual(200, response.status_code)
-        self.assertContains(response, "have things here")
+        self.assertContains(response, self.report1.description)
 
 
 class ReadReportDetailErrorsApiTest(APITestCase):

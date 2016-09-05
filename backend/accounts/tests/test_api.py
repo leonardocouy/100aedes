@@ -7,7 +7,41 @@ from rest_framework.test import APITestCase
 from model_mommy import mommy
 
 from backend.core.models import City
+from rest_framework_jwt import utils
 from ..models import User
+
+
+class AuthTest(APITestCase):
+    def setUp(self):
+        city = mommy.make_recipe('backend.core.city')
+        self.user = mommy.make_recipe('backend.core.user', city=city)
+
+    def test_get_valid_token(self):
+        """
+        Valid login user POST at /api/v1/users/auth must return status code 200 OK and
+        return valid token to the authenticated user
+        """
+        data = {'username': self.user.username, 'password': 'leo'}
+        response = self.client.post(reverse('auth-user'), data)
+        decoded_payload = utils.jwt_decode_handler(response.data['token'])
+        self.assertEqual(200, response.status_code)
+        self.assertEqual(decoded_payload['username'], self.user.username)
+
+
+class InvalidAuthTest(APITestCase):
+    def setUp(self):
+        city = mommy.make_recipe('backend.core.city')
+        self.user = mommy.make_recipe('backend.core.user', city=city)
+
+    def test_invalid_login(self):
+        """
+        Invalid login user POST at /api/v1/users/auth must return status code 400 BAD REQUEST and
+        return errors
+        """
+        data = {'username': self.user.username, 'password': 'INVALID_PASSWORD_TO_FAIL_TEST'}
+        response = self.client.post(reverse('auth-user'), data)
+        self.assertEqual(400, response.status_code)
+        self.assertTrue(response.data['non_field_errors'])
 
 
 class CreateUserTest(APITestCase):
