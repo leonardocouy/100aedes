@@ -50,7 +50,7 @@ class CreateReportApiTest(APITestCase):
     def setUp(self):
         city = mommy.make_recipe('backend.core.city')
         user = mommy.make_recipe('backend.core.user')
-        report = mommy.prepare_one(Report, city=city, user=user)
+        report = mommy.prepare_one(Report, city=city, user=user, _fill_optional=True)
         self.data = model_to_dict(report)
         self.client.login(username=user.username, password='leo')
         self.resp = self.client.post(reverse('report-list'), self.data)
@@ -159,7 +159,7 @@ class UpdateReportApiTest(APITestCase):
     def setUp(self):
         user = mommy.make_recipe('backend.core.user')
         self.client.login(username=user.username, password='leo')
-        self.report = mommy.make_one(Report, city__name='Bom Despacho', user=user)
+        self.report = mommy.make_one(Report, city__name='Bom Despacho', user=user, _fill_optional=True)
         self.report.description = 'Changed'
 
     def test_update_report(self):
@@ -178,7 +178,7 @@ class UpdateInvalidReportApiTest(APITestCase):
     def setUp(self):
         user = mommy.make_recipe('backend.core.user')
         self.client.login(username=user.username, password='leo')
-        self.report = mommy.make_one(Report, city__name='Bom Despacho', user=user)
+        self.report = mommy.make_one(Report, city__name='Bom Despacho', user=user, _fill_optional=True)
         self.report.city = None
         data = model_to_dict(self.report)
         self.resp = self.client.put(reverse('report-detail', kwargs={'pk': self.report.pk}), data)

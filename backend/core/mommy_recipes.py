@@ -2,7 +2,7 @@ from backend.core.models import City
 from backend.accounts.models import User
 from backend.reports.models import Report
 from django.contrib.auth.models import Group, ContentType, Permission
-from model_mommy.recipe import Recipe, foreign_key, related
+from model_mommy.recipe import Recipe, foreign_key
 from django.contrib.auth.hashers import make_password
 
 
@@ -31,7 +31,4 @@ user = Recipe(
     password=make_password('leo'),
     is_active=True,
     city=foreign_key(city),
-
-
 )
-
