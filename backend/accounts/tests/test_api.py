@@ -5,9 +5,10 @@ from django.forms.models import model_to_dict
 from rest_framework import status
 from rest_framework.test import APITestCase
 from model_mommy import mommy
-
-from backend.core.models import City
 from rest_framework_jwt import utils
+
+from backend.core.utils import get_jwt_token
+from backend.core.models import City
 from ..models import User
 
 
@@ -99,7 +100,7 @@ class UpdateUserTest(APITestCase):
     def setUp(self):
         city = mommy.make_recipe('backend.core.city')
         self.user = mommy.make_recipe('backend.core.user', city=city)
-        self.client.login(username=self.user.username, password='leo')
+        self.jwt_authorization = get_jwt_token(self.user)
         self.user.username = 'newname'
         self.user.email = 'newemail@email.com'
 
@@ -109,7 +110,8 @@ class UpdateUserTest(APITestCase):
         return data updated
         """
         data = model_to_dict(self.user)
-        resp = self.client.put(reverse('user-update', kwargs={'pk': self.user.pk}), data)
+        resp = self.client.put(reverse('user-update', kwargs={'pk': self.user.pk}), data,
+                               HTTP_AUTHORIZATION=self.jwt_authorization)
         response_data = json.loads(resp.content.decode('utf8'))
         self.assertEqual('newname', response_data['username'])
         self.assertEqual('newemail@email.com', response_data['email'])
@@ -119,11 +121,13 @@ class UpdateUserTest(APITestCase):
 class UpdateInvalidUserTest(APITestCase):
     def setUp(self):
         city = City.objects.create(name='TestLand', state='PR')
-        self.user = mommy.make_recipe('backend.core.user', city=city)
-        self.client.login(username=self.user.username, password='leo')
-        self.user.email = 'invalid_email_without_at'
-        data = model_to_dict(self.user)
-        self.resp = self.client.put(reverse('user-update', kwargs={'pk': self.user.pk}), data)
+        user = mommy.make_recipe('backend.core.user', city=city)
+        jwt_authorization = get_jwt_token(user)
+
+        user.email = 'invalid_email_without_at'
+        data = model_to_dict(user)
+        self.resp = self.client.put(reverse('user-update', kwargs={'pk': user.pk}), data,
+                                    HTTP_AUTHORIZATION=jwt_authorization)
 
     def test_update_invalid_data_user(self):
         """
@@ -142,14 +146,14 @@ class UpdateInvalidUserTest(APITestCase):
         """
         Check if invalid updated user has not been saved
         """
-        self.assertTrue(User.objects.get().email != self.user.email)
+        self.assertTrue(User.objects.get().email != self.resp.data.serializer.data['email'])
 
 
 class UpdateErrorsUserTest(APITestCase):
     def setUp(self):
         city = City.objects.create(name='TestLand', state='PR')
         self.user = mommy.make_recipe('backend.core.user', city=city)
-        self.client.login(username=self.user.username, password='leo')
+        self.jwt_authorization = get_jwt_token(self.user)
 
     def test_user_cant_edit_other_users(self):
         """
@@ -160,5 +164,6 @@ class UpdateErrorsUserTest(APITestCase):
         other_user = mommy.make_recipe('backend.core.user', username='leonardo2')
         other_user.first_name = 'Trying to change other user data'
         data = model_to_dict(other_user)
-        resp = self.client.put(reverse('user-update', kwargs={'pk': other_user.pk}), data)
+        resp = self.client.put(reverse('user-update', kwargs={'pk': other_user.pk}), data,
+                               HTTP_AUTHORIZATION=self.jwt_authorization)
         self.assertEqual(403, resp.status_code)

@@ -5,6 +5,8 @@ from django.urls import reverse
 from model_mommy import mommy
 from rest_framework import status
 from rest_framework.test import APITestCase
+
+from backend.accounts.tests.test_api import get_jwt_token
 from ..models import Report
 
 
@@ -13,6 +15,7 @@ class UserAuthReportApiTest(APITestCase):
         self.user = mommy.make_recipe('backend.core.user')
         self.login = self.client.login(username=self.user.username, password='leo')
         self.report = mommy.make_one(Report, user=self.user)
+        self.jwt_authorization = get_jwt_token(self.user)
 
     def test_user_is_authenticated(self):
         """
@@ -27,7 +30,7 @@ class UserAuthReportApiTest(APITestCase):
         urls = (reverse('report-list'), reverse('report-detail', kwargs={'pk': self.report.pk}))
         with self.subTest():
             for expected in urls:
-                response = self.client.get(expected)
+                response = self.client.get(expected, HTTP_AUTHORIZATION=self.jwt_authorization)
                 self.assertEqual(200, response.status_code)
 
 
@@ -35,15 +38,15 @@ class UserAuthErrorsReportApiTest(APITestCase):
     def setUp(self):
         self.report = mommy.make_one(Report)
 
-    def test_user_is_not_authenticated(self):
+    def test_user_cant_use_api(self):
         """
-        Check if user is authenticated else must return status code 403 FORBIDDEN
+        Check if user has a INVALID JWT TOKEN authorizated else must return status code 401 NOT AUTHORIZATED
         """
         urls = (reverse('report-list'), reverse('report-detail', kwargs={'pk': self.report.pk}))
         with self.subTest():
             for expected in urls:
                 response = self.client.get(expected)
-                self.assertEqual(403, response.status_code)
+                self.assertEqual(401, response.status_code)
 
 
 class CreateReportApiTest(APITestCase):
@@ -51,9 +54,9 @@ class CreateReportApiTest(APITestCase):
         city = mommy.make_recipe('backend.core.city')
         user = mommy.make_recipe('backend.core.user')
         report = mommy.prepare_one(Report, city=city, user=user, _fill_optional=True)
+        jwt_authorization = get_jwt_token(user)
         self.data = model_to_dict(report)
-        self.client.login(username=user.username, password='leo')
-        self.resp = self.client.post(reverse('report-list'), self.data)
+        self.resp = self.client.post(reverse('report-list'), self.data, HTTP_AUTHORIZATION=jwt_authorization)
 
     def test_create_report(self):
         """
@@ -77,9 +80,9 @@ class CreateReportApiTest(APITestCase):
 class CreateInvalidReportApiTest(APITestCase):
     def setUp(self):
         user = mommy.make_recipe('backend.core.user')
-        self.client.login(username=user.username, password='leo')
+        jwt_authorization = get_jwt_token(user)
         data = {'description': 'Invalid report'}
-        self.resp = self.client.post(reverse('report-list'), data)
+        self.resp = self.client.post(reverse('report-list'), data, HTTP_AUTHORIZATION=jwt_authorization)
 
     def test_create_invalid_report(self):
         """
@@ -104,7 +107,7 @@ class CreateInvalidReportApiTest(APITestCase):
 class ReadReportApiTest(APITestCase):
     def setUp(self):
         user = mommy.make_recipe('backend.core.user')
-        self.client.login(username=user.username, password='leo')
+        self.jwt_authorization = get_jwt_token(user)
         self.report1 = mommy.make_one(Report, description='have things here', user=user)
         self.report2 = mommy.make_one(Report, description='have two things here', user=user)
 
@@ -114,7 +117,7 @@ class ReadReportApiTest(APITestCase):
         Must return status code 200 OK and
         check if reports are being shown
         """
-        response = self.client.get(reverse('report-list'))
+        response = self.client.get(reverse('report-list'), HTTP_AUTHORIZATION=self.jwt_authorization)
         self.assertEqual(200, response.status_code)
         self.assertContains(response, self.report1.description)
         self.assertContains(response, self.report2.description)
@@ -125,7 +128,8 @@ class ReadReportApiTest(APITestCase):
         Must return status code 200 OK and
         check if reports are being shown
         """
-        response = self.client.get(reverse('report-detail', kwargs={'pk': self.report1.pk}))
+        response = self.client.get(reverse('report-detail', kwargs={'pk': self.report1.pk}),
+                                   HTTP_AUTHORIZATION=self.jwt_authorization)
         self.assertEqual(200, response.status_code)
         self.assertContains(response, self.report1.description)
 
@@ -133,14 +137,15 @@ class ReadReportApiTest(APITestCase):
 class ReadReportDetailErrorsApiTest(APITestCase):
     def setUp(self):
         user = mommy.make_recipe('backend.core.user')
-        self.client.login(username=user.username, password='leo')
+        self.jwt_authorization = get_jwt_token(user)
 
     def test_read_invalid_report(self):
         """
         GET invalid report_id at /api/v1/reports/report_id
         Must return status code 404 NOT FOUND
         """
-        response = self.client.get(reverse('report-detail', kwargs={'pk': 0}))
+        response = self.client.get(reverse('report-detail', kwargs={'pk': 0}),
+                                   HTTP_AUTHORIZATION=self.jwt_authorization)
         self.assertEqual(404, response.status_code)
 
     def test_not_read_other_report_details(self):
@@ -151,24 +156,26 @@ class ReadReportDetailErrorsApiTest(APITestCase):
         """
         other_user = mommy.make_recipe('backend.core.user', username='leonardo2')
         report = mommy.make_one(Report, user=other_user)
-        response = self.client.get(reverse('report-detail', kwargs={'pk': report.pk}))
+        response = self.client.get(reverse('report-detail', kwargs={'pk': report.pk}),
+                                   HTTP_AUTHORIZATION=self.jwt_authorization)
         self.assertEqual(403, response.status_code)
 
 
 class UpdateReportApiTest(APITestCase):
     def setUp(self):
         user = mommy.make_recipe('backend.core.user')
-        self.client.login(username=user.username, password='leo')
+        self.jwt_authorization = get_jwt_token(user)
         self.report = mommy.make_one(Report, city__name='Bom Despacho', user=user, _fill_optional=True)
-        self.report.description = 'Changed'
 
     def test_update_report(self):
         """
         PUT /api/v1/reports/report_id/ must return status code 200 OK and
         return data updated
         """
+        self.report.description = 'Changed'
         data = model_to_dict(self.report)
-        response = self.client.put(reverse('report-detail', kwargs={'pk': self.report.pk}), data)
+        response = self.client.put(reverse('report-detail', kwargs={'pk': self.report.pk}), data,
+                                   HTTP_AUTHORIZATION=self.jwt_authorization)
         response_data = json.loads(response.content.decode('utf8'))
         self.assertEqual(200, response.status_code)
         self.assertEqual(response_data['description'], 'Changed')
@@ -177,11 +184,12 @@ class UpdateReportApiTest(APITestCase):
 class UpdateInvalidReportApiTest(APITestCase):
     def setUp(self):
         user = mommy.make_recipe('backend.core.user')
-        self.client.login(username=user.username, password='leo')
+        jwt_authorization = get_jwt_token(user)
         self.report = mommy.make_one(Report, city__name='Bom Despacho', user=user, _fill_optional=True)
         self.report.city = None
         data = model_to_dict(self.report)
-        self.resp = self.client.put(reverse('report-detail', kwargs={'pk': self.report.pk}), data)
+        self.resp = self.client.put(reverse('report-detail', kwargs={'pk': self.report.pk}), data,
+                                    HTTP_AUTHORIZATION=jwt_authorization)
 
     def test_update_invalid_report(self):
         """
@@ -207,7 +215,7 @@ class UpdateInvalidReportApiTest(APITestCase):
 class DeleteReportApiTest(APITestCase):
     def setUp(self):
         user = mommy.make_recipe('backend.core.user')
-        self.login = self.client.login(username=user.username, password='leo')
+        self.jwt_authorization = get_jwt_token(user)
         self.report = mommy.make_one(Report, city__name='Bom Despacho', user=user)
 
     def test_delete_report(self):
@@ -215,6 +223,7 @@ class DeleteReportApiTest(APITestCase):
         DELETE at /api/v1/reports/report_id/
         Must return status code 204 NO CONTENT
         """
-        response = self.client.delete(reverse('report-detail', kwargs={'pk': self.report.pk}))
+        response = self.client.delete(reverse('report-detail', kwargs={'pk': self.report.pk}),
+                                      HTTP_AUTHORIZATION=self.jwt_authorization)
         self.assertEqual(204, response.status_code)
 
