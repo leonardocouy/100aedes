@@ -1,0 +1,16 @@
+- name: Set up a staging machine
+  hosts: staging
+  become: yes
+  become_user: root
+  remote_user: root
+  vars_files:
+    - env_vars/base.yml
+    - env_vars/staging.yml
+  roles:
+    - common
+    - mysql
+    - project
+    - gunicorn
+    - supervisor
+    - nginx
+

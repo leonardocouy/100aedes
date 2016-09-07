@@ -1,0 +1,76 @@
+- name: Create the SSH public key file
+  copy:
+    src: "{{ ssh_private_key }}.pub"
+    dest: /root/.ssh/id_rsa.pub
+    mode: 0644
+  when: ssh_github is defined
+
+- name: Create the SSH private key file
+  copy:
+    src: "{{ ssh_private_key }}"
+    dest: /root/.ssh/id_rsa
+    mode: 0600
+  when: ssh_github is defined and is_private_repo is defined
+
+- name: Setup Git Repository
+  git:
+    repo: "{{ git_repo }}"
+    dest: "{{ project_path }}"
+    clone: yes
+    key_file: "/root/.ssh/id_rsa"
+    accept_hostkey: yes
+    force: yes
+
+- name: Create a virtual environment and install requirements
+  pip:
+    virtualenv: "{{ project_path }}/venv"
+    virtualenv_python: python3.4
+    requirements: "{{ requirements_file[env_name] }}"
+
+- name: Generate a secret key executing python script in contrib/secret_gen.py
+  shell: echo `{{ virtualenv_path }}/bin/python3 {{ project_path }}/contrib/secret_gen.py`
+  register: django_secret_key
+  when: python_decouple is defined
+
+- name: Create .env in project root to store secret_keys and other data
+  template:
+    src: templates/.env.j2
+    dest: "{{ project_path }}/.env"
+  when: python_decouple is defined
+
+- name: Django makemigrations
+  django_manage:
+    command: makemigrations
+    app_path: "{{ project_path }}"
+    virtualenv: "{{ virtualenv_path }}"
+    settings: "{{ django_settings_module[env_name] }}"
+
+- name: Django migrate
+  django_manage:
+    command: migrate
+    app_path: "{{ project_path }}"
+    virtualenv: "{{ virtualenv_path }}"
+    settings: "{{ django_settings_module[env_name] }}"
+
+- name: Load initial data
+  django_manage:
+    command: loaddata
+    fixtures: "{{ initial_data_file }}"
+    app_path: "{{ project_path }}"
+    virtualenv: "{{ virtualenv_path }}"
+    settings: "{{ django_settings_module[env_name] }}"
+  when: load_initial_data is defined
+
+- name: Run Django collectstatic
+  django_manage:
+    command: collectstatic
+    app_path: "{{ project_path }}"
+    virtualenv: "{{ virtualenv_path }}"
+    settings: "{{ django_settings_module[env_name] }}"
+
+- name: Compress CSS/JS with django-compressor
+  django_manage:
+    command: compress
+    app_path: "{{ project_path }}"
+    virtualenv: "{{ virtualenv_path }}"
+    settings: "{{ django_settings_module[env_name] }}"

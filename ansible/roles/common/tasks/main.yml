@@ -1,0 +1,46 @@
+
+- name: Set up locale
+  locale_gen:
+    name: "{{ default_locale }}"
+    state: present
+
+- name: Set up locale (LC_ALL)
+  lineinfile:
+    dest: "/etc/default/locale"
+    regexp: "LC_ALL"
+    line: "LC_ALL=\"{{ default_locale}}\""
+
+- name: Install system packages
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+    state: installed
+  with_items:
+    - build-essential
+    - libstdc++6
+    - python-virtualenv
+    - python3-dev
+    - python3-pip
+    - git
+    - supervisor
+  tags: packages
+
+- name: Install extra packages
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+    state: installed
+  with_items:
+    - libtiff5-dev
+    - libjpeg8-dev
+    - zlib1g-dev
+    - libfreetype6-dev
+    - liblcms2-dev
+    - libwebp-dev
+  tags: packages
+
+- name: Install setuptools
+  pip:
+    name: setuptools
+  tags: packages
+

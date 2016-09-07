@@ -1,0 +1,70 @@
+---
+
+#############################
+# The project structure should look like this:
+#    project_name
+#    ├── manage.py
+#    ├── application_name
+#    │   ├── apps
+#    │   │   └── __init__.py
+#    │   ├── __init__.py
+#    │   ├── settings
+#    │   │   ├── base.py
+#    │   │   ├── __init__.py
+#    │   │   ├── local.py
+#    │   │   └── production.py
+#    │   ├── urls.py
+#    │   └── wsgi.py
+#    ├── requirements
+#    │   ├── base.txt
+#    │   ├── dev.txt
+#    │   └── production.txt
+#    └── README.md
+
+#############################
+
+# General settings
+
+default_locale: en_US.UTF-8
+project_name: "100aedes"
+application_name: "backend"
+project_path: "/home/django/{{ project_name }}"
+virtualenv_path: "{{ project_path }}/venv"
+log_dir: "/var/log"
+
+server_domain:
+  development: "192.168.4.23"
+  staging: "staging.100aedes.com.br"
+  production: "159.203.179.166"
+
+
+# Database settings
+load_initial_data: yes
+initial_data_file: "fixtures.json"
+
+# Application settings
+
+# if you are using python-decouple you must declare the var below
+python_decouple: yes
+# else define your secret key below and uncomment.
+#django_secret_key: YOUR_SECRET_KEY
+
+requirements_file:
+  production: "{{project_path}}/requirements/production.txt"
+  staging: "{{project_path}}/requirements/production.txt"
+  development: "{{project_path}}/requirements/dev.txt"
+
+django_debug:
+  production: False
+  staging: False
+  development: True
+
+django_settings_module:
+  production: "{{application_name}}.settings.production"
+  staging: "{{application_name}}.settings.production"
+  development: "{{application_name}}.settings.dev"
+
+allowed_hosts:
+  production: ['159.203.179.166',]
+  staging: ['.100aedes.com', '.100aedes.com.br']
+  development: ['192.168.4.23',]

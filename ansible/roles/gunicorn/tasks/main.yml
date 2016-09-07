@@ -1,0 +1,62 @@
+---
+
+- name: Create the application user
+  user:
+    name: "{{ gunicorn_user }}"
+    state: present
+
+- name: Create the application group
+  group:
+    name: "{{ gunicorn_group }}"
+    system: yes
+    state: present
+
+- name: Add the application user to the application group
+  user:
+    name: "{{ gunicorn_user }}"
+    group: "{{ gunicorn_group }}"
+    state: present
+
+- name: Create gunicorn log folder
+  file:
+    path: "{{ gunicorn_log_dir }}"
+    mode: 755
+    owner: "{{ gunicorn_user }}"
+    group: "{{ gunicorn_group }}"
+    state: directory
+
+- name: Create gunicorn run sock folder
+  file:
+    path: "{{ virtualenv_path }}/run"
+    owner: "{{ gunicorn_user }}"
+    group: "{{ gunicorn_group }}"
+    state: directory
+
+- name: Ensure gunicorn is installed
+  pip:
+    virtualenv: "{{ virtualenv_path }}"
+    name: gunicorn
+
+- name: Create the gunicorn script file
+  template:
+    src: gunicorn.j2
+    dest: "{{ gunicorn_run_script }}"
+    owner: "{{ gunicorn_user }}"
+    group: "{{ gunicorn_group }}"
+    mode: 0755
+    backup: yes
+#
+#- name: Ensure that the application file permissions are set properly
+#  file:
+#    path: {{ virtualenv_path }}
+#    recurse: yes
+#    owner: "{{ gunicorn_user }}"
+#    group: "{{ gunicorn_group }}"
+#    state: directory
+
+
+
+#- name: Start su
+#supervisorctl:
+#    name: {{ project_name }}
+#    state: started

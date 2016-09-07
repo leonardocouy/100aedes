@@ -1,0 +1,10 @@
+- name: Set up a production machine
+  hosts: all
+  vars_files:
+    - env_vars/base.yml
+    - env_vars/production.yml
+  roles:
+    - base
+    - mysql
+    - project
+    - nginx

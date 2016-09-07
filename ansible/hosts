@@ -1,0 +1,8 @@
+[staging]
+67.205.140.175 ansible_host=67.205.140.175 ansible_ssh_private_key_file='~/.ssh/id_rsa'
+
+[production]
+159.203.179.166
+
+[development]
+127.0.0.1

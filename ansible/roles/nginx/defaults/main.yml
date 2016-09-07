@@ -1,0 +1,6 @@
+---
+
+nginx_static_dir: "{{project_path}}/{{application_name}}/staticfiles/"
+nginx_media_dir: "{{project_path}}/{{application_name}}/media/"
+nginx_access_log: "{{ log_dir }}/nginx/{{project_name}}_access.log"
+nginx_error_log: "{{ log_dir }}/nginx/{{project_name}}_error.log"

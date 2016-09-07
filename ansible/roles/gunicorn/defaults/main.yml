@@ -1,0 +1,12 @@
+---
+
+gunicorn_user: deploy
+gunicorn_group: deployer
+gunicorn_num_workers: 3
+
+gunicorn_log_dir: "{{ log_dir }}/gunicorn"
+gunicorn_log_file: "{{ gunicorn_log_dir }}/gunicorn_supervisor.log"
+gunicorn_access_log: "{{ gunicorn_log_dir }}/{{ project_name }}_access.log"
+gunicorn_error_log: "{{ gunicorn_log_dir }}/{{ project_name }}_error.log"
+gunicorn_run_script: "{{ virtualenv_path }}/bin/gunicorn_start"
+

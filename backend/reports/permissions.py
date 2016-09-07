@@ -1,5 +1,4 @@
-from rest_framework.exceptions import PermissionDenied
-from rest_framework.permissions import BasePermission, SAFE_METHODS
+from rest_framework.permissions import BasePermission
 
 
 class IsReportOwner(BasePermission):

@@ -1,0 +1,9 @@
+---
+
+
+# Git Config
+git_repo: git@github.com:leonardocouy/100aedes.git
+ssh_github: yes
+is_private_repo: yes
+ssh_private_key: ~/.ssh/id_rsa
+

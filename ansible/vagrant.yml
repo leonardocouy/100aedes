@@ -1,0 +1,16 @@
+- name: Create project with vagrant
+  hosts: all
+  become: yes
+  become_user: root
+  remote_user: vagrant
+  vars_files:
+    - env_vars/base.yml
+    - env_vars/development.yml
+  roles:
+    - common
+    - mysql
+    - project
+    - gunicorn
+    - supervisor
+    - nginx
+

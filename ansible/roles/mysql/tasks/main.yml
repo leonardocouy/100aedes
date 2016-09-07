@@ -1,0 +1,59 @@
+- name: Install MySQL Packages
+  apt:
+    name: "{{item}}"
+    update_cache: yes
+    state: present
+  with_items:
+    - libmysqlclient-dev
+    - python-mysqldb
+    - mysql-server
+    - mysql-client
+  tags: packages
+
+- name: Ensure the MySQL service is running
+  service:
+    name: mysql
+    state: started
+    enabled: yes
+  tags: db
+
+- name: Ensure database is created
+  mysql_db:
+    name: "{{ db_name }}"
+    state: present
+    encoding: utf8
+  tags: db
+
+- name: Ensure user has access to the database
+  mysql_user:
+    name: "{{ db_user }}"
+    password: "{{ db_password }}"
+    priv: '{{ db_name }}.*:ALL'
+    state: present
+  tags: db
+
+#
+#- name: Start the MySQL service
+#  service:
+#    name: mysql
+#    state: started
+#    enabled: true
+#
+#- name: Ens
+#- name: update mysql root password for all root accounts
+#  mysql_user:
+#    name: "{{ mysql_root_user }}"
+#    host: "{{ item }}"
+#    password: "{{ mysql_root_password }}"
+#    login_user: "{{ mysql_root_user }}"
+#    login_password: "{{ mysql_root_password }}"
+#    check_implicit_admin: yes
+#    priv: "*.*:ALL,GRANT"
+#  with_items:
+#    - "{{ ansible_hostname }}"
+#    - 127.0.0.1
+#    - ::1
+#    - localhost
+#
+#- name: Create database
+#  mysql_db: db={{ project_name }} state=present
