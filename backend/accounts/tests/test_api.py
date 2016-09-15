@@ -70,6 +70,13 @@ class CreateUserTest(APITestCase):
         """
         self.assertTrue(User.objects.exists())
 
+    def test_return_token_after_registration(self):
+        """
+        Check if token has been returning after registration
+        """
+        response_data = json.loads(self.resp.content.decode('utf8'))
+        self.assertTrue(response_data['user_token'])
+
 
 class CreateInvalidUserTest(APITestCase):
     def setUp(self):
