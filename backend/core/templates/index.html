@@ -1,52 +1,7 @@
-{% load compress %}
-{% load staticfiles %}
-
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>100aedes</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="description" content="100aedes - seja um super cidadão e auxilie no combate ao mosquito da dengue">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+{% extends "base.html" %}
 
 
-    <!-- CSS -->
-    {% compress css %}
-      <link rel="stylesheet" type="text/x-scss" href="{% static 'css/main.scss' %}">
-    {% endcompress %}
-
-    <!-- JS -->
+{% block content %}
 
 
-  </head>
-
-  <body>
-    <div class="card card-01">
-      <div class="card-header">
-        <h1 class="card-title">Meu card</h1>
-      </div>
-      <div class="card-body">
-        ...
-      </div>
-    </div>
-
-    <div class="card card-primary card-02">
-      <div class="card-header">
-        <h1 class="card-title">Meu card</h1>
-      </div>
-      <div class="card-body">
-        ...
-      </div>
-    </div>
-
-    <div class="card card-info card-03">
-      <div class="card-header">
-        <h1 class="card-title">Meu card</h1>
-      </div>
-      <div class="card-body">
-        ...
-      </div>
-    </div>
-  </body>
-</html>
+{% endblock content %}

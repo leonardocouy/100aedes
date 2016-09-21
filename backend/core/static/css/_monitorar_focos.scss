@@ -1,0 +1,30 @@
+#monitorarFocos {
+  background: #222831;
+  width: 100%;
+  padding-bottom: 3.75rem;
+
+  .content {
+    @extend .container;
+
+    .title {
+      color: #EEEEEE;
+    }
+
+    .description {
+      @extend .col-xs-12;
+      p {
+        font-size: 1.25rem;
+        color: #EEEEEE;
+      }
+    }
+
+    .maps {
+      @extend  .col-xs-6, .offset-xs-3;
+      padding-top: 3.75rem;
+      img {
+        @extend .img-fluid;
+      }
+    }
+  }
+
+}

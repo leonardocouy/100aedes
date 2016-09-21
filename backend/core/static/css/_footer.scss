@@ -1,0 +1,14 @@
+footer {
+  padding: 1rem 0;
+  background-color: #393E46;
+
+  .content {
+    @extend .container;
+    span {
+      @extend .col-xs-12;
+      font-size: 1rem;
+      color: #EEEEEE;
+    }
+  }
+
+}

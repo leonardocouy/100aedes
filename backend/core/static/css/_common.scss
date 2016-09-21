@@ -1,0 +1,18 @@
+.title {
+  @extend .col-xs-12;
+  padding: 3.75rem 0;
+
+  h1 {
+    @extend .text-xs-center;
+  }
+
+}
+
+.section-title {
+    margin: 0 auto;
+    width: 6rem;
+    height: 0.2rem;
+    position: relative;
+    box-shadow: 0 2px 0 #FF5722;
+    text-align: center;
+}
