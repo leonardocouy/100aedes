@@ -1,4 +1,5 @@
 import json
+import unittest
 
 from django.forms import model_to_dict
 from django.urls import reverse
@@ -38,6 +39,7 @@ class UserAuthErrorsReportApiTest(APITestCase):
     def setUp(self):
         self.report = mommy.make_one(Report)
 
+    @unittest.skip("JWT Token is optional.")
     def test_user_cant_use_api(self):
         """
         Check if user has a INVALID JWT TOKEN authorizated else must return status code 401 NOT AUTHORIZATED
