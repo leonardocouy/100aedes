@@ -34,7 +34,7 @@
       }
 
       .button-actions {
-        button {
+        a {
           @extend .btn, .btn-lg;
           background-color: #FF5722;
           color: #EEEEEE;
