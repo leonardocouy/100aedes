@@ -73,5 +73,4 @@ class ReadOnlyReportAdmin(ReportAdmin):
         return False
 
 
-
 admin.site.register(Report, ReadOnlyReportAdmin)
