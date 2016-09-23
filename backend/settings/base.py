@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+import datetime
 import os
 from decouple import config, Csv
 from dj_database_url import parse as dburl
@@ -144,3 +145,8 @@ COMPRESS_PRECOMPILERS = (
     ('text/x-scss', 'sassc {infile} {outfile}'),
 )
 
+# JWT TOKEN CONFIGS
+
+JWT_AUTH = {
+    'JWT_VERIFY_EXPIRATION': False,
+}

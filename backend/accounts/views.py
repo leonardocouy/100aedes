@@ -22,7 +22,6 @@ class UserCreateView(CreateAPIView):
         return Response(data, status=status.HTTP_201_CREATED, headers=headers)
 
 
-
 class UserUpdateView(UpdateAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer

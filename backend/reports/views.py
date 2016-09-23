@@ -9,7 +9,7 @@ from .serializers import ReportSerializer
 class ReportCreateReadView(ListCreateAPIView):
     queryset = Report.objects.all()
     serializer_class = ReportSerializer
-    # permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated,)
     authentication_classes = (JSONWebTokenAuthentication, )
 
 
