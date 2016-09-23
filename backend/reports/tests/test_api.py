@@ -108,10 +108,26 @@ class CreateInvalidReportApiTest(APITestCase):
 
 class ReadReportApiTest(APITestCase):
     def setUp(self):
+        group = mommy.make_recipe('backend.core.group', name='Agente')
         user = mommy.make_recipe('backend.core.user')
-        self.jwt_authorization = get_jwt_token(user)
+        user2 = mommy.make_recipe('backend.core.user', username='test_user2')
+        super_user = mommy.make_recipe('backend.core.user', username='superuser', is_superuser=True)
+
+        ''' Create a agent user with group Agente'''
+        agent_user = mommy.make_recipe('backend.core.user', username='test_agent')
+        agent_user.groups.add(group)
+        agent_user.save()
+
+        self.jwt_authorizations = {
+            'user_1': get_jwt_token(user),
+            'user_2': get_jwt_token(user2),
+            'agent_user': get_jwt_token(agent_user),
+            'super_user': get_jwt_token(super_user)
+        }
+
         self.report1 = mommy.make_one(Report, description='have things here', user=user)
         self.report2 = mommy.make_one(Report, description='have two things here', user=user)
+        self.report_user2 = mommy.make_one(Report, description='I am user 2', user=user2)
 
     def test_read_report_list(self):
         """
@@ -119,7 +135,7 @@ class ReadReportApiTest(APITestCase):
         Must return status code 200 OK and
         check if reports are being shown
         """
-        response = self.client.get(reverse('report-list'), HTTP_AUTHORIZATION=self.jwt_authorization)
+        response = self.client.get(reverse('report-list'), HTTP_AUTHORIZATION=self.jwt_authorizations['user_1'])
         self.assertEqual(200, response.status_code)
         self.assertContains(response, self.report1.description)
         self.assertContains(response, self.report2.description)
@@ -131,9 +147,36 @@ class ReadReportApiTest(APITestCase):
         check if reports are being shown
         """
         response = self.client.get(reverse('report-detail', kwargs={'pk': self.report1.pk}),
-                                   HTTP_AUTHORIZATION=self.jwt_authorization)
+                                   HTTP_AUTHORIZATION=self.jwt_authorizations['user_1'])
         self.assertEqual(200, response.status_code)
         self.assertContains(response, self.report1.description)
+
+    def test_can_read_only_own_reports(self):
+        """
+        GET at /api/v1/reports/
+        Must return status code 200 OK and
+        certify that only own reports are being shown
+        """
+        response = self.client.get(reverse('report-list'), HTTP_AUTHORIZATION=self.jwt_authorizations['user_2'])
+        self.assertEqual(len(response.data), 1)
+        self.assertEqual(response.data[0]['user'], self.report_user2.user.pk)
+
+    def test_agent_can_read_all_reports(self):
+        """
+        GET at /api/v1/reports/
+        Must return all reports if user is superuser or agent
+        and check if all reports are being shown
+        """
+        users_token = [self.jwt_authorizations['agent_user'], self.jwt_authorizations['super_user']]
+        with self.subTest():
+            for expected in users_token:
+                response = self.client.get(reverse('report-list'),
+                                           HTTP_AUTHORIZATION=expected)
+                self.assertEqual(len(response.data), 3)
+                self.assertContains(response, self.report1.description)
+                self.assertContains(response, self.report2.description)
+                self.assertContains(response, self.report_user2.description)
+
 
 
 class ReadReportDetailErrorsApiTest(APITestCase):
