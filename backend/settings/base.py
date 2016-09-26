@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-import datetime
 import os
 from decouple import config, Csv
 from dj_database_url import parse as dburl
@@ -67,7 +66,6 @@ MIDDLEWARE_CLASSES = (
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.BasicAuthentication',
         'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
     )
@@ -150,3 +148,4 @@ COMPRESS_PRECOMPILERS = (
 JWT_AUTH = {
     'JWT_VERIFY_EXPIRATION': False,
 }
+
