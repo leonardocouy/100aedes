@@ -24,7 +24,6 @@ class ReportCreateReadView(ListCreateAPIView):
         return Report.objects.all()
 
 
-
 class ReportReadUpdateDelete(RetrieveUpdateDestroyAPIView):
     queryset = Report.objects.all()
     serializer_class = ReportSerializer
