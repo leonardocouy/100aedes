@@ -71,7 +71,7 @@ REST_FRAMEWORK = {
     )
 }
 ROOT_URLCONF = 'backend.urls'
-
+MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -147,5 +147,6 @@ COMPRESS_PRECOMPILERS = (
 
 JWT_AUTH = {
     'JWT_VERIFY_EXPIRATION': False,
+    'JWT_RESPONSE_PAYLOAD_HANDLER': 'backend.accounts.views._jwt_response_payload_handler'
 }
 

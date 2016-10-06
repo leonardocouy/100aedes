@@ -7,6 +7,13 @@ from .serializers import UserSerializer
 from .models import User
 
 
+def _jwt_response_payload_handler(token, user=None, request=None):
+    return {
+        'token': token,
+        'user': UserSerializer(user).data
+    }
+
+
 class UserCreateView(CreateAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
