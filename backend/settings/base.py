@@ -103,7 +103,15 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-LANGUAGE_CODE = 'pt-BR'
+LANGUAGE_CODE = 'pt-br'
+
+LANGUAGES = (
+    ('pt-BR', u'Português'),
+)
+
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
+)
 
 TIME_ZONE = 'America/Sao_Paulo'
 
@@ -147,6 +155,6 @@ COMPRESS_PRECOMPILERS = (
 
 JWT_AUTH = {
     'JWT_VERIFY_EXPIRATION': False,
-    'JWT_RESPONSE_PAYLOAD_HANDLER': 'backend.accounts.views._jwt_response_payload_handler'
+    'JWT_RESPONSE_PAYLOAD_HANDLER': 'backend.accounts.utils._jwt_response_payload_handler'
 }
 

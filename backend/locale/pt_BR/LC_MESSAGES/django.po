@@ -1,0 +1,2438 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-10-12 13:54-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: backend/core/models.py:43
+msgid "Cidade"
+msgstr ""
+
+#: backend/core/models.py:44
+msgid "Cidades"
+msgstr ""
+
+#: backend/reports/models.py:33
+msgid "Denúncia"
+msgstr ""
+
+#: backend/reports/models.py:34
+msgid "Denúncias"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/404.html:4
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/404.html:8
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/404.html:7
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/404.html:11
+msgid "Page not found"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/404.html:10
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/404.html:12
+msgid "We're sorry, but the requested page could not be found."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/500.html:6
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/app_index.html:10
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/auth/user/change_password.html:19
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/base.html:152
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/change_form.html:22
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/change_list.html:43
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/delete_confirmation.html:9
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/delete_selected_confirmation.html:9
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/object_history.html:7
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_change_done.html:7
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_change_form.html:12
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_reset_complete.html:7
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_reset_confirm.html:7
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_reset_done.html:7
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_reset_form.html:7
+#: venv/lib/python3.5/site-packages/grappelli/dashboard/templates/admin/index.html:25
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/500.html:9
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/app_index.html:11
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/auth/user/change_password.html:7
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/base.html:124
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/change_form.html:147
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/change_list.html:150
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/change_list_filter_sidebar.html:151
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/constance/change_list.html:43
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/csv_export_selected_confirmation.html:9
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/delete_confirmation.html:13
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/delete_selected_confirmation.html:13
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/index.html:18
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/invalid_setup.html:9
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/object_history.html:9
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin_doc/bookmarklets.html:8
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin_doc/index.html:9
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin_doc/missing_docutils.html:8
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin_doc/model_detail.html:20
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin_doc/model_index.html:23
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin_doc/template_filter_index.html:25
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin_doc/template_tag_index.html:27
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin_doc/view_detail.html:7
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin_doc/view_index.html:23
+#: venv/lib/python3.5/site-packages/grappelli/templates/grp_doc/basic_page_structure.html:132
+#: venv/lib/python3.5/site-packages/grappelli/templates/grp_doc/context_navigation.html:55
+#: venv/lib/python3.5/site-packages/grappelli/templates/registration/password_change_done.html:6
+#: venv/lib/python3.5/site-packages/grappelli/templates/registration/password_change_form.html:6
+#: venv/lib/python3.5/site-packages/grappelli/templates/reversion/recover_form.html:7
+#: venv/lib/python3.5/site-packages/grappelli/templates/reversion/recover_list.html:6
+#: venv/lib/python3.5/site-packages/grappelli/templates/reversion/revision_form.html:7
+#: venv/lib/python3.5/site-packages/grappelli/templates/smuggler/load_data_form.html:26
+msgid "Home"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/500.html:7
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/500.html:10
+msgid "Server error"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/500.html:11
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/500.html:15
+msgid "Server error (500)"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/500.html:14
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/500.html:19
+msgid "Server Error <em>(500)</em>"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/500.html:15
+msgid ""
+"There's been an error. It's been reported to the site administrators via "
+"email and should be fixed shortly. Thanks for your patience."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/actions.html:7
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/actions.html:4
+msgid "Run the selected action"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/actions.html:7
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/actions.html:4
+msgid "Go"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/actions.html:19
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/actions.html:11
+msgid "Click here to select the objects across all pages"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/actions.html:19
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/actions.html:11
+#, python-format
+msgid "Select all %(total_count)s %(module_name)s"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/actions.html:21
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/actions.html:12
+msgid "Clear selection"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/auth/user/add_form.html:7
+msgid ""
+"First, enter a username and password. Then, you'll be able to edit more user "
+"options."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/auth/user/add_form.html:10
+msgid "Enter a username and password."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/auth/user/change_password.html:31
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/auth/user/change_password.html:75
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/base.html:132
+#: venv/lib/python3.5/site-packages/grappelli/dashboard/dashboards.py:138
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/auth/user/change_password.html:11
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/auth/user/change_password.html:57
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/base.html:91
+msgid "Change password"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/auth/user/change_password.html:44
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/change_form.html:65
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/change_list.html:69
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/login.html:43
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_change_form.html:31
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/auth/user/change_password.html:27
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/change_form.html:184
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/change_list.html:231
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/change_list_filter_sidebar.html:230
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/login.html:31
+#: venv/lib/python3.5/site-packages/grappelli/templates/smuggler/load_data_form.html:42
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/auth/user/change_password.html:44
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/change_form.html:65
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_change_form.html:31
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/auth/user/change_password.html:27
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/change_form.html:184
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/change_list.html:231
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/change_list_filter_sidebar.html:230
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/login.html:31
+#: venv/lib/python3.5/site-packages/grappelli/templates/smuggler/load_data_form.html:44
+msgid "Please correct the errors below."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/auth/user/change_password.html:50
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/auth/user/change_password.html:24
+#, python-format
+msgid "Enter a new password for the user <strong>%(username)s</strong>."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/auth/user/change_password.html:60
+msgid "Password"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/auth/user/change_password.html:68
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_change_form.html:57
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/auth/user/change_password.html:46
+#: venv/lib/python3.5/site-packages/grappelli/templates/registration/password_change_form.html:37
+msgid "Password (again)"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/auth/user/change_password.html:69
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/auth/user/change_password.html:50
+#: venv/lib/python3.5/site-packages/grappelli/templates/registration/password_reset_confirm.html:29
+msgid "Enter the same password as above, for verification."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/base.html:80
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/base.html:105
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/base.html:108
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/login.html:31
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/login.html:35
+msgid "Django administration"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/base.html:127
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/base.html:141
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/base.html:106
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin_doc/bookmarklets.html:9
+msgid "Documentation"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/base.html:136
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/base.html:143
+#: venv/lib/python3.5/site-packages/grappelli/dashboard/dashboards.py:140
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/base.html:94
+msgid "Log out"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/base.html:162
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/change_list.html:68
+msgid "Close"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/base_site.html:3
+#: venv/lib/python3.5/site-packages/grappelli/templatetags/grp_tags.py:65
+msgid "Django site admin"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/change_form.html:39
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/index.html:65
+#: venv/lib/python3.5/site-packages/grappelli/dashboard/templates/grappelli/dashboard/modules/app_list.html:19
+#: venv/lib/python3.5/site-packages/grappelli/dashboard/templates/grappelli/dashboard/modules/model_list.html:9
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/app_index.html:30
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/change_form.html:153
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/index.html:45
+#: venv/lib/python3.5/site-packages/grappelli/templates/related_widget_wrapper.html:18
+msgid "Add"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/change_form.html:114
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/change_form.html:116
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/object_history.html:18
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/change_form.html:165
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/object_history.html:15
+#: venv/lib/python3.5/site-packages/grappelli/templates/reversion/revision_form.html:11
+msgid "History"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/change_form.html:121
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/change_form.html:123
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/edit_inline/stacked.html:20
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/edit_inline/tabular.html:34
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/change_form.html:166
+msgid "View on site"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/change_list.html:58
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/change_list.html:197
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/change_list_filter_sidebar.html:184
+msgid "Filter"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/change_list.html:92
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/change_list.html:168
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/change_list_filter_sidebar.html:169
+#: venv/lib/python3.5/site-packages/grappelli/templates/smuggler/change_list.html:15
+#, python-format
+msgid "Add %(name)s"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/change_list.html:154
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/submit_line.html:5
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/submit_line.html:7
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/change_list.html:258
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/constance/change_list.html:119
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/submit_line.html:10
+msgid "Save"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/change_list_results.html:13
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/change_list_results.html:20
+msgid "Remove from sorting"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/change_list_results.html:16
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/change_list_results.html:19
+#, python-format
+msgid "Sorting priority: %(priority_number)s"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/change_list_results.html:17
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/change_list_results.html:18
+msgid "Toggle sorting"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/delete_confirmation.html:20
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/submit_line.html:34
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/submit_line.html:36
+#: venv/lib/python3.5/site-packages/django/forms/formsets.py:389
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/delete_confirmation.html:19
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/submit_line.html:7
+#: venv/lib/python3.5/site-packages/grappelli/templates/related_widget_wrapper.html:26
+#: venv/lib/python3.5/site-packages/oauth2_provider/templates/oauth2_provider/application_confirm_delete.html:14
+#: venv/lib/python3.5/site-packages/oauth2_provider/templates/oauth2_provider/application_detail.html:39
+#: venv/lib/python3.5/site-packages/oauth2_provider/templates/oauth2_provider/authorized-token-delete.html:7
+msgid "Delete"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/delete_confirmation.html:29
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/delete_confirmation.html:29
+#, python-format
+msgid ""
+"Deleting the %(object_name)s '%(escaped_object)s' would result in deleting "
+"related objects, but your account doesn't have permission to delete the "
+"following types of objects:"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/delete_confirmation.html:43
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/delete_confirmation.html:37
+#, python-format
+msgid ""
+"Deleting the %(object_name)s '%(escaped_object)s' would require deleting the "
+"following protected related objects:"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/delete_confirmation.html:57
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/delete_confirmation.html:47
+#, python-format
+msgid ""
+"Are you sure you want to delete the %(object_name)s \"%(escaped_object)s\"? "
+"All of the following related items will be deleted:"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/delete_confirmation.html:65
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/delete_confirmation.html:67
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/delete_selected_confirmation.html:68
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/delete_confirmation.html:56
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/delete_selected_confirmation.html:59
+msgid "Yes, I'm sure"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/delete_selected_confirmation.html:17
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/delete_selected_confirmation.html:16
+msgid "Delete multiple objects"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/delete_selected_confirmation.html:26
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/delete_selected_confirmation.html:26
+#, python-format
+msgid ""
+"Deleting the selected %(objects_name)s would result in deleting related "
+"objects, but your account doesn't have permission to delete the following "
+"types of objects:"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/delete_selected_confirmation.html:40
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/delete_selected_confirmation.html:34
+#, python-format
+msgid ""
+"Deleting the selected %(objects_name)s would require deleting the following "
+"protected related objects:"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/delete_selected_confirmation.html:54
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/delete_selected_confirmation.html:44
+#, python-format
+msgid ""
+"Are you sure you want to delete the selected %(objects_name)s? All of the "
+"following objects and their related items will be deleted:"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/edit_inline/stacked.html:41
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/edit_inline/tabular.html:81
+msgid "Remove"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/edit_inline/stacked.html:42
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/edit_inline/tabular.html:80
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/edit_inline/stacked.html:56
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/edit_inline/tabular.html:92
+#, python-format
+msgid "Add another %(verbose_name)s"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/edit_inline/tabular.html:19
+msgid "Delete?"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/filter.html:2
+#, python-format
+msgid " By %(filter_title)s "
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/includes/object_delete_summary.html:2
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/includes/object_delete_summary.html:3
+msgid "Summary"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/index.html:18
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/index.html:31
+msgid "Apps"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/index.html:21
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/index.html:22
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/index.html:80
+#: venv/lib/python3.5/site-packages/grappelli/dashboard/dashboards.py:157
+#: venv/lib/python3.5/site-packages/grappelli/dashboard/modules.py:289
+msgid "Recent Actions"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/index.html:37
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/index.html:67
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/search_form.html:11
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/search_form.html:13
+msgid "Search"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/index.html:42
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/object_history.html:31
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/object_history.html:28
+msgid "Action"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/index.html:52
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/index.html:58
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/bootstrap_admin/sidebar_menu.html:6
+#, python-format
+msgid "Models in the %(name)s application"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/index.html:66
+#: venv/lib/python3.5/site-packages/django/forms/widgets.py:359
+#: venv/lib/python3.5/site-packages/grappelli/templates/related_widget_wrapper.html:10
+msgid "Change"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/index.html:80
+msgid "My Actions"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/index.html:85
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/index.html:76
+msgid "None available"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/index.html:111
+msgid "Unknown content"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/index.html:139
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/bootstrap_admin/sidebar_menu.html:12
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/bootstrap_admin/sidebar_menu.html:18
+msgid "You don't have permission to edit anything."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/invalid_setup.html:5
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/invalid_setup.html:16
+msgid ""
+"Something's wrong with your database installation. Make sure the appropriate "
+"database tables have been created, and make sure the database is readable by "
+"the appropriate user."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/login.html:23
+#, python-format
+msgid ""
+"You are authenticated as %(username)s, but are not authorized to access this "
+"page. Would you like to login to a different account?"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/login.html:84
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_reset_complete.html:23
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/login.html:67
+#: venv/lib/python3.5/site-packages/grappelli/templates/registration/password_reset_complete.html:17
+msgid "Log in"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/login.html:95
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/login.html:60
+msgid "Forgotten your password or username?"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/object_history.html:29
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/object_history.html:26
+#: venv/lib/python3.5/site-packages/grappelli/templates/reversion/object_history.html:13
+#: venv/lib/python3.5/site-packages/grappelli/templates/reversion/recover_list.html:22
+msgid "Date/time"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/object_history.html:30
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/object_history.html:27
+#: venv/lib/python3.5/site-packages/grappelli/templates/reversion/object_history.html:14
+msgid "User"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/object_history.html:45
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/object_history.html:42
+#: venv/lib/python3.5/site-packages/grappelli/templates/reversion/object_history.html:36
+msgid ""
+"This object doesn't have a change history. It probably wasn't added via this "
+"admin site."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/pagination.html:19
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/pagination.html:27
+msgid "Show all"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/popup_response.html:3
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/popup_response.html:3
+msgid "Popup closing..."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/related_widget_wrapper.html:8
+#: venv/lib/python3.5/site-packages/grappelli/templates/related_widget_wrapper.html:8
+#, python-format
+msgid "Change selected %(model)s"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/related_widget_wrapper.html:15
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/related_widget_wrapper.html:24
+#: venv/lib/python3.5/site-packages/grappelli/templates/related_widget_wrapper.html:16
+#, python-format
+msgid "Add another %(model)s"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/related_widget_wrapper.html:22
+#: venv/lib/python3.5/site-packages/grappelli/templates/related_widget_wrapper.html:24
+#, python-format
+msgid "Delete selected %(model)s"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/search_form.html:4
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/pagination.html:8
+#: venv/lib/python3.5/site-packages/grappelli/views/related.py:227
+#, python-format
+msgid "%(counter)s result"
+msgid_plural "%(counter)s results"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/search_form.html:4
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/pagination.html:13
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/pagination.html:15
+#, python-format
+msgid "%(full_result_count)s total"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/submit_line.html:12
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/submit_line.html:14
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/submit_line.html:13
+msgid "Save as new"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/submit_line.html:19
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/submit_line.html:21
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/submit_line.html:16
+msgid "Save and add another"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/submit_line.html:26
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/admin/submit_line.html:28
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/submit_line.html:19
+msgid "Save and continue editing"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/logged_out.html:18
+msgid "Thanks for spending some quality time with the Web site today."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/logged_out.html:20
+#: venv/lib/python3.5/site-packages/grappelli/templates/registration/logged_out.html:16
+msgid "Log in again"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_change_done.html:10
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_change_form.html:15
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/auth/user/change_password.html:15
+#: venv/lib/python3.5/site-packages/grappelli/templates/registration/password_change_done.html:7
+#: venv/lib/python3.5/site-packages/grappelli/templates/registration/password_change_form.html:7
+msgid "Password change"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_change_done.html:20
+#: venv/lib/python3.5/site-packages/grappelli/templates/registration/password_change_done.html:16
+msgid "Your password was changed."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_change_form.html:37
+#: venv/lib/python3.5/site-packages/grappelli/templates/registration/password_change_form.html:18
+msgid ""
+"Please enter your old password, for security's sake, and then enter your new "
+"password twice so we can verify you typed it in correctly."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_change_form.html:43
+#: venv/lib/python3.5/site-packages/grappelli/templates/registration/password_change_form.html:23
+msgid "Old password"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_change_form.html:50
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/auth/user/change_password.html:34
+#: venv/lib/python3.5/site-packages/grappelli/templates/registration/password_change_form.html:30
+msgid "New password"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_change_form.html:66
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_reset_confirm.html:46
+#: venv/lib/python3.5/site-packages/grappelli/templates/registration/password_change_form.html:46
+#: venv/lib/python3.5/site-packages/grappelli/templates/registration/password_reset_confirm.html:35
+msgid "Change my password"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_reset_complete.html:10
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_reset_done.html:10
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_reset_form.html:10
+#: venv/lib/python3.5/site-packages/grappelli/templates/registration/password_reset_form.html:5
+msgid "Password reset"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_reset_complete.html:20
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_reset_confirm.html:10
+msgid "Password reset confirmation"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_reset_confirm.html:24
+#: venv/lib/python3.5/site-packages/grappelli/templates/registration/password_reset_confirm.html:18
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_reset_confirm.html:30
+#: venv/lib/python3.5/site-packages/grappelli/templates/registration/password_reset_confirm.html:21
+msgid "New password:"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_reset_confirm.html:37
+#: venv/lib/python3.5/site-packages/grappelli/templates/registration/password_reset_confirm.html:26
+msgid "Confirm password:"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_reset_confirm.html:55
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_reset_done.html:19
+msgid ""
+"We've emailed you instructions for setting your password. You should be "
+"receiving them shortly."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_reset_done.html:21
+#: venv/lib/python3.5/site-packages/grappelli/templates/registration/password_reset_done.html:17
+msgid ""
+"If you don't receive an email, please make sure you've entered the address "
+"you registered with, and check your spam folder."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_reset_email.html:2
+#: venv/lib/python3.5/site-packages/grappelli/templates/registration/password_reset_email.html:2
+#, python-format
+msgid ""
+"You're receiving this email because you requested a password reset for your "
+"user account at %(site_name)s."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_reset_email.html:4
+#: venv/lib/python3.5/site-packages/grappelli/templates/registration/password_reset_email.html:4
+msgid "Please go to the following page and choose a new password:"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_reset_email.html:8
+#: venv/lib/python3.5/site-packages/grappelli/templates/registration/password_reset_email.html:8
+msgid "Your username, in case you've forgotten:"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_reset_email.html:10
+#: venv/lib/python3.5/site-packages/grappelli/templates/registration/password_reset_email.html:10
+msgid "Thanks for using our site!"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_reset_email.html:12
+#: venv/lib/python3.5/site-packages/grappelli/templates/registration/password_reset_email.html:12
+#, python-format
+msgid "The %(site_name)s team"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_reset_form.html:23
+#: venv/lib/python3.5/site-packages/grappelli/templates/registration/password_reset_form.html:17
+msgid ""
+"Forgotten your password? Enter your email address below, and we'll email "
+"instructions for setting a new one."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_reset_form.html:29
+#: venv/lib/python3.5/site-packages/grappelli/templates/registration/password_reset_form.html:20
+msgid "Email address:"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/bootstrap_admin/templates/registration/password_reset_form.html:38
+#: venv/lib/python3.5/site-packages/grappelli/templates/registration/password_reset_form.html:28
+msgid "Reset my password"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/crispy_forms/tests/test_form_helper.py:131
+#: venv/lib/python3.5/site-packages/crispy_forms/tests/test_form_helper.py:141
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:56
+msgid "This field is required."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/crispy_forms/tests/test_layout.py:347
+msgid "i18n text"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/crispy_forms/tests/test_layout.py:349
+msgid "i18n legend"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/crispy_forms/tests/test_layout_objects.py:131
+#: venv/lib/python3.5/site-packages/django/core/validators.py:33
+msgid "Enter a valid value."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/contrib/messages/apps.py:7
+msgid "Messages"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/contrib/sitemaps/apps.py:7
+msgid "Site Maps"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/contrib/staticfiles/apps.py:7
+msgid "Static Files"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/contrib/syndication/apps.py:7
+msgid "Syndication"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:106
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:663
+#: venv/lib/python3.5/site-packages/oauth2_provider/validators.py:23
+msgid "Enter a valid URL."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:159
+msgid "Enter a valid integer."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:170
+msgid "Enter a valid email address."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:243
+msgid ""
+"Enter a valid 'slug' consisting of letters, numbers, underscores or hyphens."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:250
+msgid ""
+"Enter a valid 'slug' consisting of Unicode letters, numbers, underscores, or "
+"hyphens."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:255
+#: venv/lib/python3.5/site-packages/django/core/validators.py:274
+msgid "Enter a valid IPv4 address."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:260
+#: venv/lib/python3.5/site-packages/django/core/validators.py:275
+msgid "Enter a valid IPv6 address."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:270
+#: venv/lib/python3.5/site-packages/django/core/validators.py:273
+msgid "Enter a valid IPv4 or IPv6 address."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:305
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1110
+msgid "Enter only digits separated by commas."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:311
+#, python-format
+msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:342
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:351
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:361
+#, python-format
+msgid ""
+"Ensure this value has at least %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at least %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:376
+#, python-format
+msgid ""
+"Ensure this value has at most %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at most %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:396
+#, python-format
+msgid "Ensure that there are no more than %(max)s digit in total."
+msgid_plural "Ensure that there are no more than %(max)s digits in total."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:401
+#, python-format
+msgid "Ensure that there are no more than %(max)s decimal place."
+msgid_plural "Ensure that there are no more than %(max)s decimal places."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:406
+#, python-format
+msgid ""
+"Ensure that there are no more than %(max)s digit before the decimal point."
+msgid_plural ""
+"Ensure that there are no more than %(max)s digits before the decimal point."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/base.py:1191
+#: venv/lib/python3.5/site-packages/django/forms/models.py:734
+msgid "and"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/base.py:1193
+#, python-format
+msgid "%(model_name)s with this %(field_labels)s already exists."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:110
+#, python-format
+msgid "Value %(value)r is not a valid choice."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:111
+msgid "This field cannot be null."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:112
+msgid "This field cannot be blank."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:113
+#, python-format
+msgid "%(model_name)s with this %(field_label)s already exists."
+msgstr ""
+
+#. Translators: The 'lookup_type' is one of 'date', 'year' or 'month'.
+#. Eg: "Title must be unique for pub_date year"
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:117
+#, python-format
+msgid ""
+"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:134
+#, python-format
+msgid "Field of type: %(field_type)s"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:881
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1788
+msgid "Integer"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:885
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1786
+#, python-format
+msgid "'%(value)s' value must be an integer."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:960
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1857
+msgid "Big (8 byte) integer"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:972
+#, python-format
+msgid "'%(value)s' value must be either True or False."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:974
+msgid "Boolean (Either True or False)"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1040
+#, python-format
+msgid "String (up to %(max_length)s)"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1094
+msgid "Comma-separated integers"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1151
+#, python-format
+msgid ""
+"'%(value)s' value has an invalid date format. It must be in YYYY-MM-DD "
+"format."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1153
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1298
+#, python-format
+msgid ""
+"'%(value)s' value has the correct format (YYYY-MM-DD) but it is an invalid "
+"date."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1156
+msgid "Date (without time)"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1296
+#, python-format
+msgid ""
+"'%(value)s' value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
+"uuuuuu]][TZ] format."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1300
+#, python-format
+msgid ""
+"'%(value)s' value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+"[TZ]) but it is an invalid date/time."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1304
+msgid "Date (with time)"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1454
+#, python-format
+msgid "'%(value)s' value must be a decimal number."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1456
+msgid "Decimal number"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1607
+#, python-format
+msgid ""
+"'%(value)s' value has an invalid format. It must be in [DD] [HH:[MM:]]ss[."
+"uuuuuu] format."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1610
+msgid "Duration"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1662
+msgid "Email address"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1686
+msgid "File path"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1752
+#, python-format
+msgid "'%(value)s' value must be a float."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1754
+msgid "Floating point number"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1872
+msgid "IPv4 address"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1903
+msgid "IP address"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1985
+#, python-format
+msgid "'%(value)s' value must be either None, True or False."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1987
+msgid "Boolean (Either True, False or None)"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:2054
+msgid "Positive integer"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:2066
+msgid "Positive small integer"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:2079
+#, python-format
+msgid "Slug (up to %(max_length)s)"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:2113
+msgid "Small integer"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:2120
+msgid "Text"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:2146
+#, python-format
+msgid ""
+"'%(value)s' value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
+"format."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:2148
+#, python-format
+msgid ""
+"'%(value)s' value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
+"invalid time."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:2151
+msgid "Time"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:2279
+msgid "URL"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:2302
+msgid "Raw binary data"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:2349
+#, python-format
+msgid "'%(value)s' is not a valid UUID."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/files.py:225
+msgid "File"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/files.py:387
+msgid "Image"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/related.py:734
+#, python-format
+msgid "%(model)s instance with %(field)s %(value)r does not exist."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/related.py:736
+msgid "Foreign Key (type determined by related field)"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/related.py:974
+msgid "One-to-one relationship"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/related.py:1049
+#, python-format
+msgid "%(from)s-%(to)s relationship"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/related.py:1050
+#, python-format
+msgid "%(from)s-%(to)s relationships"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/related.py:1092
+msgid "Many-to-many relationship"
+msgstr ""
+
+#. Translators: If found as last label character, these punctuation
+#. characters will prevent the default label_suffix to be appended to the label
+#: venv/lib/python3.5/site-packages/django/forms/boundfield.py:156
+msgid ":?.!"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:250
+msgid "Enter a whole number."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:295
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:332
+msgid "Enter a number."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:410
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:1136
+msgid "Enter a valid date."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:434
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:1137
+msgid "Enter a valid time."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:456
+msgid "Enter a valid date/time."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:485
+msgid "Enter a valid duration."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:542
+msgid "No file was submitted. Check the encoding type on the form."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:543
+msgid "No file was submitted."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:544
+msgid "The submitted file is empty."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:546
+#, python-format
+msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid_plural ""
+"Ensure this filename has at most %(max)d characters (it has %(length)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:549
+msgid "Please either submit a file or check the clear checkbox, not both."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:611
+msgid ""
+"Upload a valid image. The file you uploaded was either not an image or a "
+"corrupted image."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:767
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:863
+#: venv/lib/python3.5/site-packages/django/forms/models.py:1240
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:864
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:979
+#: venv/lib/python3.5/site-packages/django/forms/models.py:1239
+msgid "Enter a list of values."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:980
+msgid "Enter a complete value."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:1195
+msgid "Enter a valid UUID."
+msgstr ""
+
+#. Translators: This is the default suffix added to form field labels
+#: venv/lib/python3.5/site-packages/django/forms/forms.py:84
+msgid ":"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/forms.py:199
+#, python-format
+msgid "(Hidden field %(name)s) %(error)s"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/formsets.py:97
+msgid "ManagementForm data is missing or has been tampered with"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/formsets.py:350
+#, python-format
+msgid "Please submit %d or fewer forms."
+msgid_plural "Please submit %d or fewer forms."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.5/site-packages/django/forms/formsets.py:357
+#, python-format
+msgid "Please submit %d or more forms."
+msgid_plural "Please submit %d or more forms."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.5/site-packages/django/forms/formsets.py:385
+#: venv/lib/python3.5/site-packages/django/forms/formsets.py:387
+msgid "Order"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/models.py:729
+#, python-format
+msgid "Please correct the duplicate data for %(field)s."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/models.py:733
+#, python-format
+msgid "Please correct the duplicate data for %(field)s, which must be unique."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/models.py:739
+#, python-format
+msgid ""
+"Please correct the duplicate data for %(field_name)s which must be unique "
+"for the %(lookup)s in %(date_field)s."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/models.py:748
+msgid "Please correct the duplicate values below."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/models.py:1072
+msgid "The inline foreign key did not match the parent instance primary key."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/models.py:1133
+msgid "Select a valid choice. That choice is not one of the available choices."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/models.py:1242
+#, python-format
+msgid "\"%(pk)s\" is not a valid value for a primary key."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/utils.py:172
+#, python-format
+msgid ""
+"%(datetime)s couldn't be interpreted in time zone %(current_timezone)s; it "
+"may be ambiguous or it may not exist."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/widgets.py:358
+msgid "Currently"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/widgets.py:360
+msgid "Clear"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/widgets.py:577
+msgid "Unknown"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/widgets.py:578
+msgid "Yes"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/widgets.py:579
+msgid "No"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/template/defaultfilters.py:848
+msgid "yes,no,maybe"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/template/defaultfilters.py:877
+#: venv/lib/python3.5/site-packages/django/template/defaultfilters.py:894
+#, python-format
+msgid "%(size)d byte"
+msgid_plural "%(size)d bytes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.5/site-packages/django/template/defaultfilters.py:896
+#, python-format
+msgid "%s KB"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/template/defaultfilters.py:898
+#, python-format
+msgid "%s MB"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/template/defaultfilters.py:900
+#, python-format
+msgid "%s GB"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/template/defaultfilters.py:902
+#, python-format
+msgid "%s TB"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/template/defaultfilters.py:904
+#, python-format
+msgid "%s PB"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dateformat.py:66
+msgid "p.m."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dateformat.py:67
+msgid "a.m."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dateformat.py:72
+msgid "PM"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dateformat.py:73
+msgid "AM"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dateformat.py:158
+msgid "midnight"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dateformat.py:160
+msgid "noon"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:6
+msgid "Monday"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:6
+msgid "Tuesday"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:6
+msgid "Wednesday"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:6
+msgid "Thursday"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:6
+msgid "Friday"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:7
+msgid "Saturday"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:7
+msgid "Sunday"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:10
+msgid "Mon"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:10
+msgid "Tue"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:10
+msgid "Wed"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:10
+msgid "Thu"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:10
+msgid "Fri"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:11
+msgid "Sat"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:11
+msgid "Sun"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:18
+msgid "January"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:18
+msgid "February"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:18
+msgid "March"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:18
+msgid "April"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:18
+msgid "May"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:18
+msgid "June"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:19
+msgid "July"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:19
+msgid "August"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:19
+msgid "September"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:19
+msgid "October"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:19
+msgid "November"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:20
+msgid "December"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:23
+msgid "jan"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:23
+msgid "feb"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:23
+msgid "mar"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:23
+msgid "apr"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:23
+msgid "may"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:23
+msgid "jun"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:24
+msgid "jul"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:24
+msgid "aug"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:24
+msgid "sep"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:24
+msgid "oct"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:24
+msgid "nov"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:24
+msgid "dec"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:31
+msgctxt "abbrev. month"
+msgid "Jan."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:32
+msgctxt "abbrev. month"
+msgid "Feb."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:33
+msgctxt "abbrev. month"
+msgid "March"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:34
+msgctxt "abbrev. month"
+msgid "April"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:35
+msgctxt "abbrev. month"
+msgid "May"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:36
+msgctxt "abbrev. month"
+msgid "June"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:37
+msgctxt "abbrev. month"
+msgid "July"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:38
+msgctxt "abbrev. month"
+msgid "Aug."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:39
+msgctxt "abbrev. month"
+msgid "Sept."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:40
+msgctxt "abbrev. month"
+msgid "Oct."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:41
+msgctxt "abbrev. month"
+msgid "Nov."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:42
+msgctxt "abbrev. month"
+msgid "Dec."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:45
+msgctxt "alt. month"
+msgid "January"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:46
+msgctxt "alt. month"
+msgid "February"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:47
+msgctxt "alt. month"
+msgid "March"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:48
+msgctxt "alt. month"
+msgid "April"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:49
+msgctxt "alt. month"
+msgid "May"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:50
+msgctxt "alt. month"
+msgid "June"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:51
+msgctxt "alt. month"
+msgid "July"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:52
+msgctxt "alt. month"
+msgid "August"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:53
+msgctxt "alt. month"
+msgid "September"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:54
+msgctxt "alt. month"
+msgid "October"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:55
+msgctxt "alt. month"
+msgid "November"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:56
+msgctxt "alt. month"
+msgid "December"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/ipv6.py:12
+msgid "This is not a valid IPv6 address."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/text.py:78
+#, python-format
+msgctxt "String to return when truncating text"
+msgid "%(truncated_text)s..."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/text.py:248
+msgid "or"
+msgstr ""
+
+#. Translators: This string is used as a separator between list elements
+#: venv/lib/python3.5/site-packages/django/utils/text.py:267
+#: venv/lib/python3.5/site-packages/django/utils/timesince.py:63
+msgid ", "
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/timesince.py:11
+#, python-format
+msgid "%d year"
+msgid_plural "%d years"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.5/site-packages/django/utils/timesince.py:12
+#, python-format
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.5/site-packages/django/utils/timesince.py:13
+#, python-format
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.5/site-packages/django/utils/timesince.py:14
+#, python-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.5/site-packages/django/utils/timesince.py:15
+#, python-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.5/site-packages/django/utils/timesince.py:16
+#, python-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.5/site-packages/django/utils/timesince.py:52
+msgid "0 minutes"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/csrf.py:109
+msgid "Forbidden"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/csrf.py:110
+msgid "CSRF verification failed. Request aborted."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/csrf.py:114
+msgid ""
+"You are seeing this message because this HTTPS site requires a 'Referer "
+"header' to be sent by your Web browser, but none was sent. This header is "
+"required for security reasons, to ensure that your browser is not being "
+"hijacked by third parties."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/csrf.py:119
+msgid ""
+"If you have configured your browser to disable 'Referer' headers, please re-"
+"enable them, at least for this site, or for HTTPS connections, or for 'same-"
+"origin' requests."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/csrf.py:124
+msgid ""
+"You are seeing this message because this site requires a CSRF cookie when "
+"submitting forms. This cookie is required for security reasons, to ensure "
+"that your browser is not being hijacked by third parties."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/csrf.py:129
+msgid ""
+"If you have configured your browser to disable cookies, please re-enable "
+"them, at least for this site, or for 'same-origin' requests."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/csrf.py:134
+msgid "More information is available with DEBUG=True."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/debug.py:509
+msgid "Welcome to Django"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/debug.py:510
+msgid "It worked!"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/debug.py:511
+msgid "Congratulations on your first Django-powered page."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/debug.py:513
+msgid ""
+"Of course, you haven't actually done any work yet. Next, start your first "
+"app by running <code>python manage.py startapp [app_label]</code>."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/debug.py:517
+msgid ""
+"You're seeing this message because you have <code>DEBUG = True</code> in "
+"your Django settings file and you haven't configured any URLs. Get to work!"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/generic/dates.py:48
+msgid "No year specified"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/generic/dates.py:104
+msgid "No month specified"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/generic/dates.py:163
+msgid "No day specified"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/generic/dates.py:219
+msgid "No week specified"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/generic/dates.py:378
+#: venv/lib/python3.5/site-packages/django/views/generic/dates.py:406
+#, python-format
+msgid "No %(verbose_name_plural)s available"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/generic/dates.py:660
+#, python-format
+msgid ""
+"Future %(verbose_name_plural)s not available because %(class_name)s."
+"allow_future is False."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/generic/dates.py:694
+#, python-format
+msgid "Invalid date string '%(datestr)s' given format '%(format)s'"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/generic/detail.py:55
+#, python-format
+msgid "No %(verbose_name)s found matching the query"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/generic/list.py:76
+msgid "Page is not 'last', nor can it be converted to an int."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/generic/list.py:81
+#, python-format
+msgid "Invalid page (%(page_number)s): %(message)s"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/generic/list.py:171
+#, python-format
+msgid "Empty list and '%(class_name)s.allow_empty' is False."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/static.py:58
+msgid "Directory indexes are not allowed here."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/static.py:60
+#, python-format
+msgid "\"%(path)s\" does not exist"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/static.py:100
+#, python-format
+msgid "Index of %(directory)s"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/dashboard/dashboards.py:90
+msgid "Dashboard"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/dashboard/dashboards.py:134
+msgid "Quick links"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/dashboard/dashboards.py:137
+msgid "Return to site"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/dashboard/dashboards.py:146
+#: venv/lib/python3.5/site-packages/grappelli/dashboard/modules.py:212
+msgid "Applications"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/dashboard/dashboards.py:152
+msgid "Administration"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/dashboard/dashboards.py:161
+msgid "Latest Django News"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/dashboard/dashboards.py:168
+msgid "Support"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/dashboard/dashboards.py:171
+msgid "Django documentation"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/dashboard/dashboards.py:176
+msgid "Django \"django-users\" mailing list"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/dashboard/dashboards.py:181
+msgid "Django irc channel"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/dashboard/modules.py:186
+msgid "Links"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/dashboard/modules.py:350
+msgid "RSS Feed"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/dashboard/templates/grappelli/dashboard/modules/recent_actions.html:18
+msgid "None Available"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/500.html:20
+msgid ""
+"There's been an error. It's been reported to the site administrators via e-"
+"mail and should be fixed shortly. Thanks for your patience."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/app_index.html:13
+#, python-format
+msgid "<li>%(name)s</li>"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/app_index.html:37
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/index.html:54
+msgid "You don´t have permission to edit anything."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/base.html:101
+msgid "View site"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/change_form.html:137
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/edit_inline/stacked.html:8
+msgid "Open All Items"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/change_form.html:138
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/edit_inline/stacked.html:9
+msgid "Close All Items"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/constance/change_list.html:70
+msgid "Name"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/constance/change_list.html:75
+msgid "Default"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/constance/change_list.html:80
+msgid "Value"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/constance/change_list.html:85
+msgid "Is modified"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/csv_export_selected_confirmation.html:12
+msgid "Export selection as CSV"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/csv_export_selected_confirmation.html:31
+msgid "Export following fields:"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/csv_export_selected_confirmation.html:34
+msgid "Select all"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/csv_export_selected_confirmation.html:54
+msgid "Back"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/csv_export_selected_confirmation.html:55
+msgid "Export"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/delete_confirmation.html:55
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/delete_selected_confirmation.html:58
+#: venv/lib/python3.5/site-packages/oauth2_provider/templates/oauth2_provider/application_confirm_delete.html:13
+msgid "Cancel"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/edit_inline/stacked.html:10
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/edit_inline/stacked.html:58
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/edit_inline/tabular.html:94
+msgid "Add Item"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/edit_inline/stacked.html:27
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/edit_inline/tabular.html:67
+msgid "View on Site"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/edit_inline/stacked.html:29
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/edit_inline/tabular.html:69
+msgid "Move Item"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/edit_inline/stacked.html:33
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/edit_inline/stacked.html:38
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/edit_inline/tabular.html:73
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/edit_inline/tabular.html:78
+msgid "Delete Item"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/edit_inline/tabular.html:8
+msgid "Add Another"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/filter.html:4
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/filter_listing.html:3
+#, python-format
+msgid "%(filter_title)s"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/index.html:59
+msgid "Custom Views"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/index.html:71
+msgid "Recent actions"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/index.html:73
+msgid "My actions"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/login.html:26
+msgid "Login"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin/object_history.html:34
+msgid "DATETIME_FORMAT"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin_doc/bookmarklets.html:10
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin_doc/bookmarklets.html:16
+msgid "Bookmarklets"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin_doc/bookmarklets.html:13
+msgid "Documentation bookmarklets"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin_doc/bookmarklets.html:18
+msgid ""
+"\n"
+"            <p>To install bookmarklets, drag the link to your bookmarks\n"
+"    toolbar, or right-click the link and add it to your bookmarks. Now you "
+"can\n"
+"    select the bookmarklet from any page in the site.  Note that some of "
+"these\n"
+"    bookmarklets require you to be viewing the site from a computer "
+"designated\n"
+"    as \"internal\" (talk to your system administrator if you aren't sure "
+"if\n"
+"    your computer is \"internal\").</p>\n"
+"        "
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin_doc/bookmarklets.html:27
+msgid "Documentation for this page"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin_doc/bookmarklets.html:28
+msgid ""
+"Jumps you from any page to the documentation for the view that generates "
+"that page."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin_doc/bookmarklets.html:31
+msgid "Show object ID"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin_doc/bookmarklets.html:32
+msgid ""
+"Shows the content-type and unique ID for pages that represent a single "
+"object."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin_doc/bookmarklets.html:35
+msgid "Edit this object (current window)"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin_doc/bookmarklets.html:36
+msgid "Jumps to the admin page for pages that represent a single object."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin_doc/bookmarklets.html:39
+msgid "Edit this object (new window)"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin_doc/bookmarklets.html:40
+msgid "As above, but opens the admin page in a new window."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin_doc/view_index.html:43
+msgid "Empty namespace"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/admin_doc/view_index.html:57
+msgid "Views by empty namespace"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/registration/password_reset_complete.html:16
+msgid "Your password has been set. You may go ahead and log in now."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/registration/password_reset_confirm.html:47
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used. Please request a new password reset."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/registration/password_reset_done.html:5
+msgid "Password reset successful"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/registration/password_reset_done.html:16
+msgid ""
+"We've emailed you instructions for setting your password, if an account "
+"exists with the email you entered. You should receive them shortly."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/reversion/change_list.html:6
+#: venv/lib/python3.5/site-packages/grappelli/templates/reversion/recover_form.html:10
+#: venv/lib/python3.5/site-packages/grappelli/templates/reversion/recover_list.html:9
+#, python-format
+msgid "Recover deleted %(name)s"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/reversion/object_history.html:7
+msgid ""
+"Choose a date from the list below to revert to a previous version of this "
+"object."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/reversion/object_history.html:15
+msgid "Comment"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/reversion/recover_form.html:20
+msgid "Press the save button below to recover this version of the object."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/reversion/recover_list.html:16
+msgid ""
+"Choose a date from the list below to recover a deleted version of an object."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/reversion/recover_list.html:36
+msgid "There are no deleted objects to recover."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/reversion/revision_form.html:12
+#, python-format
+msgid "Revert %(verbose_name)s"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/reversion/revision_form.html:21
+msgid "Press the save button below to revert to this version of the object."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/smuggler/change_list.html:7
+msgid "Dump data"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/smuggler/change_list.html:11
+#: venv/lib/python3.5/site-packages/grappelli/templates/smuggler/load_data_form.html:8
+#: venv/lib/python3.5/site-packages/grappelli/templates/smuggler/load_data_form.html:27
+#: venv/lib/python3.5/site-packages/grappelli/templates/smuggler/load_data_form.html:37
+msgid "Load data"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/smuggler/load_data_form.html:48
+msgid ""
+"Existing items with same <strong>primary key</strong> will be overwritten."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/templates/smuggler/load_data_form.html:55
+msgid "Load"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/tests/test_switch.py:103
+#: venv/lib/python3.5/site-packages/grappelli/tests/test_switch.py:162
+#: venv/lib/python3.5/site-packages/grappelli/views/switch.py:37
+#: venv/lib/python3.5/site-packages/grappelli/views/switch.py:48
+msgid "Permission denied."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/tests/test_switch.py:146
+#: venv/lib/python3.5/site-packages/grappelli/views/switch.py:40
+#: venv/lib/python3.5/site-packages/grappelli/views/switch.py:51
+#, python-format
+msgid "%(name)s object with primary key %(key)r does not exist."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/grappelli/views/related.py:99
+#: venv/lib/python3.5/site-packages/grappelli/views/related.py:129
+msgid "?"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:313
+msgid "usage: "
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:821
+msgid ".__call__() not defined"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1105
+#, python-format
+msgid "unknown parser %r (choices: %s)"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1146
+#, python-format
+msgid "argument \"-\" with mode %r"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1349
+#, python-format
+msgid "cannot merge actions - two groups are named %r"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1387
+msgid "'required' is an invalid argument for positionals"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1407
+#, python-format
+msgid "invalid option string %r: must start with a character %r"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1428
+#, python-format
+msgid "dest= is required for options like %r"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1445
+#, python-format
+msgid "invalid conflict_resolution value: %r"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1463
+#, python-format
+msgid "conflicting option string(s): %s"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1526
+msgid "mutually exclusive arguments must be optional"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1596
+msgid "positional arguments"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1597
+msgid "optional arguments"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1615
+msgid "show this help message and exit"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1621
+msgid "show program's version number and exit"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1653
+msgid "cannot have multiple subparser arguments"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1705
+#, python-format
+msgid "unrecognized arguments: %s"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1802
+#, python-format
+msgid "not allowed with argument %s"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1848
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1862
+#, python-format
+msgid "ignored explicit argument %r"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1952
+msgid "too few arguments"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1959
+#, python-format
+msgid "argument %s is required"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1973
+#, python-format
+msgid "one of the arguments %s is required"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:2019
+msgid "expected one argument"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:2020
+msgid "expected at most one argument"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:2021
+msgid "expected at least one argument"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:2023
+#, python-format
+msgid "expected %s argument(s)"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:2080
+#, python-format
+msgid "ambiguous option: %s could match %s"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:2142
+#, python-format
+msgid "unexpected option string: %s"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:2243
+#, python-format
+msgid "%r is not callable"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:2259
+#, python-format
+msgid "invalid %s value: %r"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:2269
+#, python-format
+msgid "invalid choice: %r (choose from %s)"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:2362
+#, python-format
+msgid "%s: error: %s\n"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/oauth2_provider/models.py:43
+msgid "Confidential"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/oauth2_provider/models.py:44
+msgid "Public"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/oauth2_provider/models.py:52
+msgid "Authorization code"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/oauth2_provider/models.py:53
+msgid "Implicit"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/oauth2_provider/models.py:54
+msgid "Resource owner password-based"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/oauth2_provider/models.py:55
+msgid "Client credentials"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/oauth2_provider/models.py:61
+msgid "Allowed URIs list, space separated"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/oauth2_provider/models.py:116
+#, python-brace-format
+msgid "Redirect_uris could not be empty with {0} grant_type"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/oauth2_provider/templates/oauth2_provider/application_confirm_delete.html:7
+msgid "Are you sure to delete the application"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/oauth2_provider/templates/oauth2_provider/application_detail.html:11
+msgid "Client id"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/oauth2_provider/templates/oauth2_provider/application_detail.html:16
+msgid "Client secret"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/oauth2_provider/templates/oauth2_provider/application_detail.html:21
+msgid "Client type"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/oauth2_provider/templates/oauth2_provider/application_detail.html:26
+msgid "Authorization Grant Type"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/oauth2_provider/templates/oauth2_provider/application_detail.html:31
+msgid "Redirect Uris"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/oauth2_provider/templates/oauth2_provider/application_detail.html:37
+#: venv/lib/python3.5/site-packages/oauth2_provider/templates/oauth2_provider/application_form.html:36
+msgid "Go Back"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/oauth2_provider/templates/oauth2_provider/application_detail.html:38
+msgid "Edit"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/oauth2_provider/templates/oauth2_provider/application_form.html:10
+msgid "Edit application"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/oauth2_provider/templates/oauth2_provider/application_list.html:7
+msgid "Your applications"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/oauth2_provider/templates/oauth2_provider/application_list.html:17
+msgid "No applications defined"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/oauth2_provider/templates/oauth2_provider/application_list.html:17
+msgid "Click here"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/oauth2_provider/templates/oauth2_provider/application_list.html:17
+msgid "if you want to register a new one"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/oauth2_provider/templates/oauth2_provider/application_registration_form.html:6
+msgid "Register a new application"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/oauth2_provider/templates/oauth2_provider/authorize.html:8
+msgid "Authorize"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/oauth2_provider/templates/oauth2_provider/authorize.html:17
+msgid "Application requires following permissions"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/oauth2_provider/templates/oauth2_provider/authorized-token-delete.html:6
+msgid "Are you sure you want to delete this token?"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/oauth2_provider/templates/oauth2_provider/authorized-tokens.html:7
+msgid "Tokens"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/oauth2_provider/templates/oauth2_provider/authorized-tokens.html:20
+msgid "There are no authorized tokens yet."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/rest_framework_jwt/serializers.py
+msgid "Unable to login with provided credentials."
+msgstr "Não foi possível entrar. Verifique se Usuário e Senha estão corretos."
