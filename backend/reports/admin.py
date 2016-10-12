@@ -24,6 +24,11 @@ class ReportAdmin(admin.ModelAdmin):
     def get_city_and_state(self, obj):
         return obj.city.__str__()
 
+    def get_form(self, request, obj=None, **kwargs):
+        form = super(ReportAdmin, self).get_form(request, obj, **kwargs)
+        form.base_fields['status'].choices.pop(0)
+        return form
+
     get_email.admin_order_field = 'user__email'
     get_email.short_description = 'Email'
 
