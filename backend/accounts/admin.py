@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.forms import PasswordInput
 
 from .models import User
 
@@ -16,6 +17,11 @@ class UserAdmin(admin.ModelAdmin):
 
     get_full_name.admin_order_field = 'user__first_Name'
     get_full_name.short_description = 'Nome Completo'
+
+    def get_form(self, request, obj=None, **kwargs):
+        form = super(UserAdmin, self).get_form(request, obj, **kwargs)
+        form.base_fields['password'].widget = PasswordInput()
+        return form
 
     def save_model(self, request, obj, form, change):
         if obj.pk:
