@@ -54,7 +54,7 @@
     "pk": 1,
     "fields": {
       "password": "pbkdf2_sha256$30000$r957Le3mYjC9$QCVDPxEI5tbzk5+qJfGVIRgUjl9+nwD3cJCmDInSrgA=",
-      "last_login": "2016-08-27T17:03:36.334Z",
+      "last_login": "2016-08-27T17:03:36.334",
       "is_superuser": true,
       "username": "leo",
       "first_name": "Leonardo",
@@ -62,7 +62,7 @@
       "email": "leo@leo.com",
       "is_staff": true,
       "is_active": true,
-      "date_joined": "2016-08-27T17:01:45.817Z",
+      "date_joined": "2016-08-27T17:01:45.817",
       "city": 1,
       "user_type": 0,
       "groups": [],
