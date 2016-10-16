@@ -223,12 +223,13 @@
     <script src="{% static "libs/markerclusterer.js" %}"></script>
     <script src="{% static "libs/highcharts-ng/dist/highcharts-ng.min.js" %}"></script>
 
-    {% compress js %}
     <!-- Google Maps -->
     <script src="{% static "libs/lodash/dist/lodash.min.js" %}"></script>
     <script src="{% static "libs/angular-simple-logger/dist/angular-simple-logger.min.js" %}"></script>
     <script src="{% static "libs/angular-google-maps/dist/angular-google-maps.min.js" %}"></script>
 
+
+    {% compress js %}
     <!-- App -->
     <script src="{% static "js/app/app.module.js" %}"></script>
     <script src="{% static "js/app/app.run.js" %}"></script>
