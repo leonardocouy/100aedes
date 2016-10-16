@@ -1,0 +1,9 @@
+{% load bootstrap_filters %}
+
+{% for field in form %}
+    <div class="form-group">
+        {{ field.name.errors }}
+        <label for="{{ field.name.id_for_label }}">{{ field.label }}</label>
+        {{ field | bootstrap_input:field.label }}
+    </div>
+{% endfor %}

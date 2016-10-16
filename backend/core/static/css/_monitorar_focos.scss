@@ -18,9 +18,79 @@
       }
     }
 
+
     .maps {
       @extend  .col-xs-6, .offset-xs-3;
       padding-top: 3.75rem;
+      width: 100%;
+      margin: 0 auto;
+
+
+      .explanation {
+        @extend .alert;
+        font-size: 14px;
+        margin-top: 1.875rem;
+        background-color: #EEEEEE;
+        color: #222831;
+      }
+
+      .angular-google-map-container {
+        height: 550px;
+      }
+
+      #reportsChart {
+        padding-top: 3.75rem;
+
+        .highcharts-button-symbol{
+          stroke: #EEEEEE;
+          border: solid 1px #FF5722 !important;
+        }
+
+        .highcharts-button-box{
+          width: 26px;
+          height: 22px;
+          x: 0px;
+          y: 1px;
+          rx: 3px;
+          ry: 3px;
+          stroke: #FF5722 !important;
+          background-color: lighten(#222831, 4%) !important;
+          fill: lighten(#222831, 4%) !important;
+          stroke-width: 1px;
+        }
+
+        .highcharts-button {
+
+          padding: .5rem .75rem;
+          line-height: 1;
+          font-size: 1.25rem;
+          border-radius: 0.25rem;
+          border: solid 1px #FF5722 !important;
+        }
+        .highcharts-title {
+          fill: #EEEEEE !important;
+          font-size: 1.25rem !important;
+        }
+
+        .highcharts-background {
+          fill: #222831;
+        }
+
+        .highcharts-legend-box {
+          fill: none;
+          stroke-width: 0;
+        }
+
+        .highcharts-legend-item text{
+          fill: #EEEEEE !important;
+
+          &:hover {
+            fill: darken(#EEEEEE, 10%) !important;
+          }
+        }
+
+      }
+
       img {
         @extend .img-fluid;
       }

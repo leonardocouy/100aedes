@@ -14,11 +14,17 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
 from django.conf.urls import include, url
+from django.conf import settings
 from django.contrib import admin
+
+
 from backend.core import urls as core_urls
 from backend.reports import urls as reports_urls
 from backend.accounts import urls as users_urls
 
+
+# change admin title
+admin.site.site_header = settings.ADMIN_SITE_HEADER
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^', include(core_urls)),

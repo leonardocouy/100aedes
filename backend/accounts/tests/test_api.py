@@ -10,23 +10,34 @@ from rest_framework_jwt import utils
 from backend.core.utils import get_jwt_token
 from backend.core.models import City
 from ..models import User
+from ..serializers import UserSerializer
 
 
 class AuthTest(APITestCase):
     def setUp(self):
         city = mommy.make_recipe('backend.core.city')
         self.user = mommy.make_recipe('backend.core.user', city=city)
+        data = {'username': self.user.username, 'password': 'leo'}
+        self.response = self.client.post(reverse('auth-user'), data)
 
     def test_get_valid_token(self):
         """
         Valid login user POST at /api/v1/users/auth must return status code 200 OK and
         return valid token to the authenticated user
         """
-        data = {'username': self.user.username, 'password': 'leo'}
-        response = self.client.post(reverse('auth-user'), data)
-        decoded_payload = utils.jwt_decode_handler(response.data['token'])
-        self.assertEqual(200, response.status_code)
+
+        decoded_payload = utils.jwt_decode_handler(self.response.data['token'])
+        self.assertEqual(200, self.response.status_code)
         self.assertEqual(decoded_payload['username'], self.user.username)
+
+    def test_user_fields(self):
+        """
+        Check if users fields has been returning
+        """
+        expected_fields = UserSerializer(self.user).get_fields()
+        with self.subTest():
+            for expected in expected_fields:
+                self.assertEquals(UserSerializer(self.user).data[expected], self.response.data['user'][expected])
 
 
 class InvalidAuthTest(APITestCase):

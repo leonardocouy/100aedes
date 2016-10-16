@@ -119,7 +119,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 # Auth
 
@@ -158,3 +158,15 @@ JWT_AUTH = {
     'JWT_RESPONSE_PAYLOAD_HANDLER': 'backend.accounts.utils._jwt_response_payload_handler'
 }
 
+# EMAIL CONFIG
+SERVER_EMAIL = config('EMAIL_HOST_USER')
+DEFAULT_FROM_EMAIL = config('EMAIL_HOST_USER')
+EMAIL_HOST = 'smtp.zoho.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_USE_TLS = True
+
+# Django-Admin
+
+ADMIN_SITE_HEADER = "Painel de Administração - 100aedes"
