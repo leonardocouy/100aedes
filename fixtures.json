@@ -54,7 +54,7 @@
     "pk": 1,
     "fields": {
       "password": "pbkdf2_sha256$30000$r957Le3mYjC9$QCVDPxEI5tbzk5+qJfGVIRgUjl9+nwD3cJCmDInSrgA=",
-      "last_login": "2016-08-27T17:03:36.334",
+      "last_login": "2016-08-27T17:03:36",
       "is_superuser": true,
       "username": "leo",
       "first_name": "Leonardo",
