@@ -89,6 +89,11 @@
           }
         }
 
+        .highcharts-data-label text{
+          fill: #EEEEEE !important;
+          text-shadow: 1px 1px #222831, -1px -1px #222831, -1px 1px #222831, 1px -1px #222831 !important;
+        }
+
       }
 
       img {

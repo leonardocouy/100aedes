@@ -20,7 +20,6 @@
         ////////////////
 
         function getReports() {
-            console.log('returning something');
             return $http.get(API_URL)
                 .then(getReportsComplete)
                 .catch(getReportsFailed);

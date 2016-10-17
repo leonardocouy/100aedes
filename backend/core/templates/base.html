@@ -132,24 +132,10 @@
 
             <div class="maps">
 
-                <ui-gmap-google-map center='vm.map.center' zoom='vm.map.zoom' options='vm.map.options' bounds='vm.map.bounds'>
-{#                    <ui-gmap-markers models="vm.reportsNotResolved" coords="'self'" icon="'icon'" type="'cluster'"  typeOptions="vm.map.clusterOpt"></ui-gmap-markers>#}
-{#                      <ui-gmap-circle center="vm.map.circleOpt.center"#}
-{#                                      radius="vm.map.circleOpt.radius"#}
-{#                                      fill="vm.map.circleOpt.fill"#}
-{#                                      stroke="vm.map.circleOpt.stroke"#}
-{#                                      clickable="vm.map.circleOpt.clickable"#}
-{#                                      draggable="vm.map.circleOpt.draggable"#}
-{#                                      editable="vm.map.circleOpt.editable"#}
-{#                                      visible="vm.map.circle.visible">#}
-{##}
-{#                      </ui-gmap-circle>#}
-{#                    <ui-gmap-markers models="vm.reportss" coords="'self'" icon="'icon'" type="'cluster'" typeOptions="vm.map.clusterOpt"></ui-gmap-markers>#}
-{#                    <ui-gmap-markers models="vm.reports.sentReports" coords="'self'" icon="'icon'" type="'cluster'" typeOptions="vm.map.sentReportsMCOpt"></ui-gmap-markers>#}
-{#                    <ui-gmap-markers models="vm.reports.notResolvedReports" coords="'self'" icon="'icon'" type="'cluster'" typeOptions="vm.map.notResolvedReportsMCOpt"></ui-gmap-markers>#}
-{#                    <ui-gmap-markers models="vm.reports.resolvedReports" coords="'self'" icon="'icon'" type="'cluster'" typeOptions="vm.map.resolvedReportsMCOpt"></ui-gmap-markers>#}
+                <ui-gmap-google-map center='vm.map.center' zoom='vm.map.zoom' options='vm.map.options' ng-cloak>
                     <ui-gmap-layer namespace="visualization" type="HeatmapLayer" show='vm.map.showHeat' onCreated='vm.map.heatLayerCallback'></ui-gmap-layer>
                 </ui-gmap-google-map>
+
                 <div class="explanation">
 
                   <strong>OBSERVAÇÃO:</strong> O mapa acima demonstra a região de possíveis focos denunciados, assim que resolvidos, as marcações não serão exibidas mais no mapa.
