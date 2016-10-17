@@ -32,7 +32,6 @@ class Report(models.Model):
     class Meta:
         verbose_name = _("Denúncia")
         verbose_name_plural = _("Denúncias")
-        ordering = ('modified_at',)
 
     def __str__(self):
         return 'Denúncia feita por - {} - {}'.format(self.user.first_name,
