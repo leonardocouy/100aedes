@@ -9,8 +9,7 @@
 
   function HomeController(dataService,  $timeout, uiGmapGoogleMapApi) {
     var vm = this;
-
-    vm.reportss = []
+    
     vm.title = 'HomeController';
     vm.reports = {
       'sentReports': [],
@@ -103,7 +102,6 @@
               switch (report.status) {
                 // Enviadas
                 case 1:
-                  vm.reportss.push({location: new google.maps.LatLng(report.latitude, report.longitude), weight: 500});
                   vm.reports.sentReports.push({
                     location: new google.maps.LatLng(report.latitude, report.longitude),
                     weight: 500
@@ -111,7 +109,6 @@
                   break;
                 // Em análise
                 case 2:
-                  vm.reportss.push({location: new google.maps.LatLng(report.latitude, report.longitude), weight: 1000});
                   vm.reports.notResolvedReports.push({
                     location: new google.maps.LatLng(report.latitude, report.longitude),
                     weight: 1000
@@ -125,7 +122,6 @@
 
               }
             });
-
             return data;
           });
 

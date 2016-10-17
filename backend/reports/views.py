@@ -18,8 +18,10 @@ class ReportCreateReadView(ListCreateAPIView):
         user = self.request.user
         if not user.is_superuser:
             try:
-                if (user.groups.get(id=1).name == 'Agente') or user.is_superuser:
+                if user.groups.get(id=1).name == 'Agente':
                     return Report.objects.filter(Q(status=1) | Q(status=2))
+                elif user.is_superuser:
+                    return Report.objects.all()
             except Group.DoesNotExist:
                 return Report.objects.filter(user=user)
         return Report.objects.filter(Q(status=1) | Q(status=2))
