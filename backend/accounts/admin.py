@@ -1,4 +1,6 @@
 from django.contrib import admin
+from django.core.exceptions import ObjectDoesNotExist
+from django.db.models import Model
 from django.forms import PasswordInput
 
 from .models import User
@@ -15,7 +17,7 @@ class UserAdmin(admin.ModelAdmin):
     def get_full_name(self, obj):
         return obj.get_full_name()
 
-    get_full_name.admin_order_field = 'user__first_Name'
+    get_full_name.admin_order_field = 'first_name'
     get_full_name.short_description = 'Nome Completo'
 
     def get_form(self, request, obj=None, **kwargs):
@@ -24,15 +26,18 @@ class UserAdmin(admin.ModelAdmin):
         return form
 
     def save_model(self, request, obj, form, change):
-        if form.cleaned_data['groups'].get().name == 'Coordenador':
-            obj.is_staff = True
-
         if obj.pk:
             orig_obj = User.objects.get(pk=obj.pk)
             if obj.password != orig_obj.password:
                 obj.set_password(obj.password)
         else:
             obj.set_password(obj.password)
+
+        try:
+            if form.cleaned_data['groups'].get().name == 'Coordenador':
+                obj.is_staff = True
+        except ObjectDoesNotExist:
+            pass
 
         obj.save()
 
