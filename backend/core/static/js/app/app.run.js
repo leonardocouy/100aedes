@@ -7,7 +7,7 @@
     runApp.$inject = ['$http'];
 
     function runApp($http) {
-        $http.defaults.headers.common['Authorization'] = 'JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InRva2VuIiwiZW1haWwiOiIiLCJleHAiOjE0NzY2Njk4ODIsInVzZXJfaWQiOjE0NX0.c0TrLDKPm0qCHqG39_hQtDIwOjdlDz4ggC5Q-llfuMs  ';
+        $http.defaults.headers.common['Authorization'] = 'JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRva2VuIiwiZXhwIjoxNDc3NDMzNTI4LCJlbWFpbCI6ImNvbnRhdG9AMTAwYWVkZXMuY29tLmJyIiwidXNlcl9pZCI6NH0.L6VlbFORhdAFK5vBYXMVe52TIeWmd4pwHm7y4UFIHZg';
     }
 
 })();
