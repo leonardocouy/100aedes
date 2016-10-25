@@ -12,6 +12,10 @@
     mode: 0600
   when: ssh_github is defined and is_private_repo is defined
 
+- name: Ensure that a strong Diffie-Hellman group is used
+  command: openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048 creates=/etc/ssl/certs/dhparam.pem
+  when: nginx_strong_dh_group is defined and nginx_strong_dh_group
+
 - name: Setup Git Repository
   git:
     repo: "{{ git_repo }}"

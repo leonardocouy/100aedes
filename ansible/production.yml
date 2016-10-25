@@ -13,3 +13,4 @@
     - gunicorn
     - supervisor
     - nginx
+    - certbot

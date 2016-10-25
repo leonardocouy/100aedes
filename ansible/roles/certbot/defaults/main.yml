@@ -1,0 +1,6 @@
+---
+
+certbot_auto_renew: yes
+certbot_admin_email: 100aedes@gmail.com
+certbot_script: /opt/certbot-auto
+certbot_output_dir: "/etc/letsencrypt/live/production"

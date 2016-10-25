@@ -13,4 +13,3 @@
     - gunicorn
     - supervisor
     - nginx
-
