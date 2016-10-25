@@ -1,0 +1,214 @@
+[
+  {
+    "model": "accounts.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$30000$r957Le3mYjC9$QCVDPxEI5tbzk5+qJfGVIRgUjl9+nwD3cJCmDInSrgA=",
+      "last_login": "2016-10-24T21:32:10",
+      "is_superuser": true,
+      "username": "leo",
+      "first_name": "Leonardo",
+      "last_name": "Flores",
+      "email": "leo@leo.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2016-08-27T17:01:45",
+      "phone": "",
+      "city": 1,
+      "user_type": 0,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$30000$3RlGaTGfu1LO$XCtrlswF1nzFQ3SQBiqAmuh6PZRKZCAhs+cGqxxOLN0=",
+      "last_login": "2016-10-18T22:04:27",
+      "is_superuser": true,
+      "username": "gaie",
+      "first_name": "Gabriel",
+      "last_name": "Araujo",
+      "email": "gaiebd@hotmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2016-09-06T00:15:28",
+      "phone": "323132132",
+      "city": 1,
+      "user_type": 0,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$30000$GycIN9kuX9zk$b7akFxRScRl8XuAgeyl6dIOwjwUBVXCkIuv0aif2jHQ=",
+      "last_login": "2016-10-22T18:56:41",
+      "is_superuser": true,
+      "username": "jean",
+      "first_name": "Jean Fl\u00e1vio Morais Cunha",
+      "last_name": "",
+      "email": "jeanflavio04@hotmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2016-09-06T00:25:50",
+      "phone": "(37) 99967-7619",
+      "city": 1,
+      "user_type": 0,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$30000$QVXk6VVIEPNp$ZCxuLSh7hqW0IMw3RYhXc1mC+40YqumxxX64PECFhaA=",
+      "last_login": "2016-10-11T23:13:44",
+      "is_superuser": true,
+      "username": "jones",
+      "first_name": "Jonadabe",
+      "last_name": "Aquino",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2016-09-06T00:26:04",
+      "phone": "12213321",
+      "city": 1,
+      "user_type": 0,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 61,
+    "fields": {
+      "password": "pbkdf2_sha256$30000$E4GJ1OuI5hBP$xp0LFr3wf4D+Wz06nxnb2SV5isxPb7zm7EJOExMofHQ=",
+      "last_login": "2016-09-22T13:16:49",
+      "is_superuser": true,
+      "username": "marcelobrito",
+      "first_name": "Marcelo",
+      "last_name": "brito",
+      "email": "marcelounipac@hotmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2016-09-22T12:00:29",
+      "phone": "",
+      "city": 1,
+      "user_type": 0,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 135,
+    "fields": {
+      "password": "pbkdf2_sha256$30000$iGtK3v7NEZEW$Fk//MPQL9OSqqwMr+ON7grdPrsJaeTd95bzYdP/myIk=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "britobd",
+      "first_name": "Marcelo Brito",
+      "last_name": "",
+      "email": "marcelounipac@hotmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-10-11T19:36:00",
+      "phone": "3799085065",
+      "city": 1,
+      "user_type": 0,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 144,
+    "fields": {
+      "password": "pbkdf2_sha256$30000$bZlrEa7NhGUQ$LK5NjHBd9LFVgq89o4PZ7Dsep78ogr3vrCKcVVkqvBQ=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "aninha",
+      "first_name": "Anna",
+      "last_name": "",
+      "email": "annalu-campos@hotmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-10-16T17:44:49",
+      "phone": "(37) 99944-8963",
+      "city": 1,
+      "user_type": 0,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 145,
+    "fields": {
+      "password": "pbkdf2_sha256$30000$KrBfPKJTDWRW$E6ykFPlipmuT62RMBV6lSK/JXzikjC8mQwgYi0HdEbc=",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "token",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-10-16T23:26:26",
+      "phone": "212321332",
+      "city": 1,
+      "user_type": 0,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 174,
+    "fields": {
+      "password": "pbkdf2_sha256$30000$SfarLlskaJAf$1/czehobgrZGXjUfc+sNe3wH5mTwGHXCCDzea9WSxio=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "agente1",
+      "first_name": "Agente1 Bom Despacho",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-10-24T20:15:20",
+      "phone": "35211111",
+      "city": 1,
+      "user_type": 0,
+      "groups": [
+        1
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 175,
+    "fields": {
+      "password": "pbkdf2_sha256$30000$vM8NBoJgl8bs$ur/S4uvvZRrGslQLVQVo2eLW0chz3V4LW4f2kfGAG8U=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "100aedes",
+      "first_name": "100aedes",
+      "last_name": "",
+      "email": "contato@100aedes.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-10-24T20:21:58",
+      "phone": "(99) 99999-9999",
+      "city": 1,
+      "user_type": 0,
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]

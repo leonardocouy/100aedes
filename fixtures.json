@@ -68,5 +68,68 @@
       "groups": [],
       "user_permissions": []
     }
+  },
+    {
+    "model": "accounts.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$30000$3RlGaTGfu1LO$XCtrlswF1nzFQ3SQBiqAmuh6PZRKZCAhs+cGqxxOLN0=",
+      "last_login": "2016-10-18T22:04:27",
+      "is_superuser": true,
+      "username": "gaie",
+      "first_name": "Gabriel",
+      "last_name": "Araujo",
+      "email": "gaiebd@hotmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2016-09-06T00:15:28",
+      "phone": "323132132",
+      "city": 1,
+      "user_type": 0,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$30000$GycIN9kuX9zk$b7akFxRScRl8XuAgeyl6dIOwjwUBVXCkIuv0aif2jHQ=",
+      "last_login": "2016-10-22T18:56:41",
+      "is_superuser": true,
+      "username": "jean",
+      "first_name": "Jean Fl\u00e1vio Morais Cunha",
+      "last_name": "",
+      "email": "jeanflavio04@hotmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2016-09-06T00:25:50",
+      "phone": "(37) 99967-7619",
+      "city": 1,
+      "user_type": 0,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$30000$QVXk6VVIEPNp$ZCxuLSh7hqW0IMw3RYhXc1mC+40YqumxxX64PECFhaA=",
+      "last_login": "2016-10-11T23:13:44",
+      "is_superuser": true,
+      "username": "jones",
+      "first_name": "Jonadabe",
+      "last_name": "Aquino",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2016-09-06T00:26:04",
+      "phone": "12213321",
+      "city": 1,
+      "user_type": 0,
+      "groups": [],
+      "user_permissions": []
+    }
   }
  ]
