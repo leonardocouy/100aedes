@@ -5,4 +5,4 @@
 159.203.179.166
 
 [development]
-127.0.0.1
+192.241.143.131 ansible_host=192.241.143.131 ansible_ssh_private_key_file='~/.ssh/id_rsa'

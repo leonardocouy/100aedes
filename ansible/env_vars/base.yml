@@ -35,7 +35,7 @@ log_dir: "/var/log"
 server_domain:
   development: "192.168.4.23"
   staging: "staging.100aedes.com.br"
-  production: "159.203.179.166"
+  production: "100aedes.com.br"
 
 
 # Database settings
@@ -65,6 +65,6 @@ django_settings_module:
   development: "{{application_name}}.settings.dev"
 
 allowed_hosts:
-  production: ['159.203.179.166',]
+  production: ['.100aedes.com', '.100aedes.com.br']
   staging: ['.100aedes.com', '.100aedes.com.br']
   development: ['192.168.4.23',]

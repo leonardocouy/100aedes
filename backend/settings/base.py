@@ -161,17 +161,16 @@ JWT_AUTH = {
 # EMAIL CONFIG
 SERVER_EMAIL = config('EMAIL_HOST_USER')
 DEFAULT_FROM_EMAIL = config('EMAIL_HOST_USER')
-# EMAIL_HOST = 'smtp.zoho.com'
-# EMAIL_PORT = 587
-# EMAIL_HOST_USER = config('EMAIL_HOST_USER')
-# EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
-# EMAIL_USE_TLS = True
-
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST = 'smtp.zoho.com'
+EMAIL_PORT = 587
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
-EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
 # Django-Admin
 
 ADMIN_SITE_HEADER = "Painel de Administração - 100aedes"
+
+# Playstore link
+
+PLAYSTORE_URL = 'https://play.google.com/store/apps/details?id=com.ionicframework.agroque795635'

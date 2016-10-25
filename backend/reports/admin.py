@@ -3,7 +3,7 @@ from .models import Report
 
 
 class ReportAdmin(admin.ModelAdmin):
-    search_fields = ['address', 'district']
+    search_fields = ['address', 'district', 'user__first_name', 'user__last_name', 'user__email', 'user__phone']
     date_hierarchy = 'created_at'
     list_display = ('get_full_name', 'get_phone', 'get_email', 'created_at', 'address', 'district',
                     'get_city_and_state', 'modified_at', 'status',)
