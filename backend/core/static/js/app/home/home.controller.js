@@ -104,14 +104,14 @@
                 case 1:
                   vm.reports.sentReports.push({
                     location: new google.maps.LatLng(report.latitude, report.longitude),
-                    weight: 500
+                    weight: 40
                   });
                   break;
                 // Em análise
                 case 2:
                   vm.reports.notResolvedReports.push({
                     location: new google.maps.LatLng(report.latitude, report.longitude),
-                    weight: 1000
+                    weight: 100
                   });
                   break;
                 // Foco tratado ou não encontrado
