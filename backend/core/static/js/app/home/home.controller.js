@@ -161,7 +161,7 @@
     function MockHeatLayer(heatLayer) {
       // Apenas denúncias que foram enviadas e as queestão em analise
        var data = vm.reports.sentReports.concat(vm.reports.notResolvedReports);
-      heatLayer.set('radius', 20);
+      // heatLayer.set('radius', 20);
       heatLayer.set('opacity', 1);
       // $timeout(function () {
           var pointArray = new google.maps.MVCArray(data);
