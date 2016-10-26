@@ -22,7 +22,7 @@ class UserAdmin(admin.ModelAdmin):
 
     def get_form(self, request, obj=None, **kwargs):
         form = super(UserAdmin, self).get_form(request, obj, **kwargs)
-        form.base_fields['password'].widget = PasswordInput()
+        form.base_fields['password'].widget = PasswordInput(render_value=True)
         return form
 
     def save_model(self, request, obj, form, change):
