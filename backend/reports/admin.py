@@ -3,17 +3,17 @@ from .models import Report
 
 
 class ReportAdmin(admin.ModelAdmin):
-    search_fields = ['address', 'district', 'user__first_name', 'user__last_name', 'user__email', 'user__phone']
+    search_fields = ['address', 'district', 'user__first_name', 'user__email', 'user__phone']
     date_hierarchy = 'created_at'
-    list_display = ('get_full_name', 'get_phone', 'get_email', 'created_at', 'address', 'district',
+    list_display = ('get_first_name', 'get_phone', 'get_email', 'created_at', 'address', 'district',
                     'get_city_and_state', 'modified_at', 'status',)
     list_filter = ('status', 'city__name', 'created_at',)
     actions = ['accept', 'reject', 'pending']
     exclude = ['Permissions']
     READ_ONLY_GROUPS = ("Agente",)
 
-    def get_full_name(self, obj):
-        return obj.user.get_full_name()
+    def get_first_name(self, obj):
+        return obj.user.first_name
 
     def get_email(self, obj):
         return obj.user.email
@@ -35,8 +35,8 @@ class ReportAdmin(admin.ModelAdmin):
     get_phone.admin_order_field = 'user__phone'
     get_phone.short_description = 'Telefone'
 
-    get_full_name.admin_order_field = 'user__first_name'
-    get_full_name.short_description = 'Enviado por'
+    get_first_name.admin_order_field = 'user__first_name'
+    get_first_name.short_description = 'Enviado por'
 
     get_city_and_state.admin_order_field = 'city__name'
     get_city_and_state.short_description = 'Cidade/UF'

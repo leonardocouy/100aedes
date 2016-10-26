@@ -5,9 +5,9 @@
       .module('app')
       .controller('HomeController', HomeController);
 
-  HomeController.$inject = ['dataService', '$timeout', 'uiGmapGoogleMapApi'];
+  HomeController.$inject = ['dataService', '$timeout', 'uiGmapGoogleMapApi', 'uiGmapIsReady'];
 
-  function HomeController(dataService,  $timeout, uiGmapGoogleMapApi) {
+  function HomeController(dataService,  $timeout, uiGmapGoogleMapApi, uiGmapIsReady) {
     var vm = this;
     
     vm.title = 'HomeController';
@@ -161,7 +161,7 @@
     function MockHeatLayer(heatLayer) {
       // Apenas denúncias que foram enviadas e as queestão em analise
       var data = vm.reports.sentReports.concat(vm.reports.notResolvedReports);
-        var gradient = [
+      var gradient = [
         'rgba(229, 153, 0, 0)',
         'rgba(231, 140, 0, 1)',
         'rgba(233, 128, 1, 1)',
@@ -181,8 +181,13 @@
       heatLayer.set('radius', 20);
       heatLayer.set('opacity', 1);
       // $timeout(function () {
-          var pointArray = new google.maps.MVCArray(data);
-          heatLayer.setData(pointArray)
+      uiGmapIsReady.promise().then(function(instances){
+        var maps = instances[0].map;
+        var pointArray = new google.maps.MVCArray(data);
+        heatLayer.setData(pointArray)
+      });
+
+
       // }, 1000);
     }
   }

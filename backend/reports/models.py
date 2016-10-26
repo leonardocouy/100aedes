@@ -24,7 +24,7 @@ class Report(models.Model):
     latitude = models.FloatField(null=True)
     longitude = models.FloatField(null=True)
     status = models.IntegerField('Status', choices=REPORT_STATUS_CHOICES, default=0, null=False)
-    reason = models.TextField('Razão do Status', blank=True)
+    reason = models.TextField('Razão do Status', blank=True, null=True)
     image_url = models.ImageField(upload_to='denuncias/', blank=True)
     created_at = models.DateTimeField('Criado em', auto_now_add=True)
     modified_at = models.DateTimeField('Modificado em', auto_now=True)
