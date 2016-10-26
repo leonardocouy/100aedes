@@ -161,6 +161,23 @@
     function MockHeatLayer(heatLayer) {
       // Apenas denúncias que foram enviadas e as queestão em analise
       var data = vm.reports.sentReports.concat(vm.reports.notResolvedReports);
+        var gradient = [
+        'rgba(229, 153, 0, 0)',
+        'rgba(231, 140, 0, 1)',
+        'rgba(233, 128, 1, 1)',
+        'rgba(235, 116, 2, 1)',
+        'rgba(237, 103, 3, 1)',
+        'rgba(239, 91, 4, 1)',
+        'rgba(242, 79, 5, 1)',
+        'rgba(244, 66, 5, 1)',
+        'rgba(246, 54, 6, 1)',
+        'rgba(248, 42, 7, 1)',
+        'rgba(127, 57, 51, 1)',
+        'rgba(252, 17, 9, 1)',
+        'rgba(255, 5, 10, 1)',
+        'rgba(255, 0, 0, 1)'
+      ];
+      heatLayer.set('gradient', heatLayer.get('gradient') ? null : gradient);
       heatLayer.set('radius', 20);
       heatLayer.set('opacity', 1);
       // $timeout(function () {
