@@ -163,19 +163,19 @@
       var data = vm.reports.sentReports.concat(vm.reports.notResolvedReports);
       var gradient = [
         'rgba(229, 153, 0, 0)',
-        'rgba(231, 140, 0, 1)',
-        'rgba(233, 128, 1, 1)',
-        'rgba(235, 116, 2, 1)',
-        'rgba(237, 103, 3, 1)',
-        'rgba(239, 91, 4, 1)',
-        'rgba(242, 79, 5, 1)',
-        'rgba(244, 66, 5, 1)',
-        'rgba(246, 54, 6, 1)',
-        'rgba(248, 42, 7, 1)',
-        'rgba(127, 57, 51, 1)',
-        'rgba(252, 17, 9, 1)',
-        'rgba(255, 5, 10, 1)',
-        'rgba(255, 0, 0, 1)'
+        'rgba(231, 141, 0, 1)',
+        'rgba(233, 130, 1, 1)',
+        'rgba(235, 118, 2, 1)',
+        'rgba(237, 107, 3, 1)',
+        'rgba(239, 96, 4, 1)',
+        'rgba(241, 84, 5, 1)',
+        'rgba(243, 73, 5, 1)',
+        'rgba(245, 61, 6, 1)',
+        'rgba(247, 50, 6, 1)',
+        'rgba(249, 39, 7, 1)',
+        'rgba(251, 27, 8, 1)',
+        'rgba(253, 16, 9, 1)',
+        'rgba(255, 5, 10, 1)'
       ];
       heatLayer.set('gradient', heatLayer.get('gradient') ? null : gradient);
       heatLayer.set('radius', 20);

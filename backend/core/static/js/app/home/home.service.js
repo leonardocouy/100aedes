@@ -8,7 +8,7 @@
     dataService.$inject = ['$http'];
 
     function dataService($http) {
-        var API_URL = 'https://100aedes.com.br/api/v1/reports/';
+        // var API_URL = 'https://100aedes.com.br/api/v1/reports/';
 
         var service = {
             getReports: getReports,
