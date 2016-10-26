@@ -161,7 +161,24 @@
     function MockHeatLayer(heatLayer) {
       // Apenas denúncias que foram enviadas e as queestão em analise
        var data = vm.reports.sentReports.concat(vm.reports.notResolvedReports);
-      // heatLayer.set('radius', 20);
+        var gradient = [
+        'rgba(0, 255, 255, 0)',
+        'rgba(0, 255, 255, 1)',
+        'rgba(0, 191, 255, 1)',
+        'rgba(0, 127, 255, 1)',
+        'rgba(0, 63, 255, 1)',
+        'rgba(0, 0, 255, 1)',
+        'rgba(0, 0, 223, 1)',
+        'rgba(0, 0, 191, 1)',
+        'rgba(0, 0, 159, 1)',
+        'rgba(0, 0, 127, 1)',
+        'rgba(63, 0, 91, 1)',
+        'rgba(127, 0, 63, 1)',
+        'rgba(191, 0, 31, 1)',
+        'rgba(255, 0, 0, 1)'
+      ]
+      heatLayer.set('gradient', heatLayer.get('gradient') ? null : gradient);
+      heatLayer.set('radius', 20);
       heatLayer.set('opacity', 1);
       // $timeout(function () {
           var pointArray = new google.maps.MVCArray(data);
