@@ -57,6 +57,7 @@
                 Comece a ajudar sua cidade agora</p>
                 <div class="button-actions">
                     <a href="#idea" class="btn">Conheça a ideia!</a>
+                    <a href="{% url 'playstore' %}"><img  src="{% static 'img/playstore.png' %}"/></a>
 {#                    <img class="playstore" src="{% static 'img/playstore.png' %}"/>#}
                 </div>
             </div>
@@ -163,7 +164,7 @@
 
         <div class="social-medias">
             <h4>Redes Sociais</h4>
-            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+            <a href="https://www.facebook.com/100aedes/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
         </div>
     </section>
 
@@ -178,7 +179,7 @@
             <div class="download_app">
                 <h4> Baixe nosso aplicativo </h4>
                 <div class="line"></div>
-                <img  src="{% static 'img/playstore.png' %}"/>
+                <a href="{% url 'playstore' %}"><img  src="{% static 'img/playstore.png' %}"/></a>
             </div>
         </div>
     </section>
