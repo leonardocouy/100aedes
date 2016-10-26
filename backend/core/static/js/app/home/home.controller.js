@@ -179,7 +179,7 @@
       ];
       heatLayer.set('gradient', heatLayer.get('gradient') ? null : gradient);
       heatLayer.set('radius', 20);
-      heatLayer.set('opacity', 1);
+      // heatLayer.set('opacity', 1);
       // $timeout(function () {
       uiGmapIsReady.promise().then(function(instances){
         var maps = instances[0].map;
