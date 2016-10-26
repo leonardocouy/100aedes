@@ -161,7 +161,6 @@
     function MockHeatLayer(heatLayer) {
       // Apenas denúncias que foram enviadas e as queestão em analise
       var data = vm.reports.sentReports.concat(vm.reports.notResolvedReports);
-      heatLayer.set('gradient', heatLayer.get('gradient') ? null : gradient);
       heatLayer.set('radius', 20);
       heatLayer.set('opacity', 1);
       // $timeout(function () {
