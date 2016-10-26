@@ -5,12 +5,10 @@
         .module('app')
         .factory('dataService', dataService);
 
-    dataService.$inject = ['$http'];
+    dataService.$inject = ['$http', 'API_URL'];
 
-    function dataService($http) {
-        var API_URL = 'https://100aedes.com.br/api/v1/reports/';
-
-
+    function dataService($http, API_URL) {
+        
         var service = {
             getReports: getReports,
             calculatePercentage: calculatePercentage
