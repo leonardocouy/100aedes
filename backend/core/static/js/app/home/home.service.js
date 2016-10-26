@@ -8,7 +8,6 @@
     dataService.$inject = ['$http', 'API_URL'];
 
     function dataService($http, API_URL) {
-        console.log(API_URL)
         var service = {
             getReports: getReports,
             calculatePercentage: calculatePercentage

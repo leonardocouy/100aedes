@@ -4,7 +4,7 @@
         .module('app')
         .run(runApp);
 
-    runApp.$inject = ['$http'];
+    runApp.$inject = ['$http', 'JWT_TOKEN'];
 
     function runApp($http, JWT_TOKEN) {
         $http.defaults.headers.common['Authorization'] = 'JWT ' + JWT_TOKEN;
