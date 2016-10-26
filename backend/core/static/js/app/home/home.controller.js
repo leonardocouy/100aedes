@@ -14,7 +14,8 @@
     vm.reports = {
       'sentReports': [],
       'notResolvedReports': [],
-      'resolvedReports': []
+      'resolvedReports': [],
+      'transferredReports': []
     };
     //     styles:    [{
     //   textColor: 'white',
@@ -119,7 +120,10 @@
                 case 4:
                   vm.reports.resolvedReports.push({location: new google.maps.LatLng(report.latitude, report.longitude)});
                   break;
-
+                // transferida
+                case 5:
+                  vm.reports.transferredReports.push({location: new google.maps.LatLng(report.latitude, report.longitude)})
+                  break;
               }
             });
             return data;
@@ -129,11 +133,11 @@
 
     function calculatePercentage() {
       var totalReports = vm.reports.notResolvedReports.length + vm.reports.resolvedReports.length +
-          vm.reports.sentReports.length;
+          vm.reports.sentReports.length +  vm.reports.transferredReports.length;
 
       var results = dataService.calculatePercentage(
           [vm.reports.sentReports.length, vm.reports.notResolvedReports.length,
-            vm.reports.resolvedReports.length], totalReports
+            vm.reports.resolvedReports.length,  vm.reports.transferredReports.length], totalReports
       );
 
       vm.reportsChartConfig.series[0].data = [{
@@ -151,6 +155,11 @@
         num_reports: vm.reports.resolvedReports.length,
         y: results[2],
         color: '#FF5722'
+      }, {
+        name: 'Transferidas',
+        num_reports:  vm.reports.transferredReports.length,
+        y: results[3],
+        color: '#FF9115'
       }];
     }
 

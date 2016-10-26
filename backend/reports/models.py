@@ -10,7 +10,8 @@ REPORT_STATUS_CHOICES = (
     (1, 'Enviada'),
     (2, 'Em análise'),
     (3, 'Foco tratado'),
-    (4, 'Foco não encontrado')
+    (4, 'Foco não encontrado'),
+    (5, 'Transferida')
 )
 
 
