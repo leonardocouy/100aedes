@@ -1,0 +1,38 @@
+#infos {
+  background: #222831;
+  width: 100%;
+  padding: 3.75rem 0;
+
+  .content {
+    @extend .container;
+
+    .line {
+      width: 4rem;
+      height: 0.2rem;
+      position: relative;
+      box-shadow: 0 2px 0 #FF5722;
+    }
+
+    .about, .download_app {
+      @extend .col-md-6, .col-xs-12, .text-xs-left;
+
+      h4 {
+        color: #EEEEEE;
+      }
+
+      p {
+        padding-top: 1rem;
+        color: #EEEEEE;
+      }
+
+      img {
+        padding-top: 1rem;
+        width: 180px;
+      }
+
+    }
+  }
+
+
+
+}

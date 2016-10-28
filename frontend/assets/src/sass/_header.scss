@@ -1,0 +1,48 @@
+#header {
+  background: #222831;
+  width: 100%;
+  min-height: 800px;
+  padding-top: 6rem;
+
+  .content {
+    @extend .container;
+
+
+    .mockup-app {
+      @extend .col-md-3;
+      @extend .col-xs-12;
+
+      .mockup-image {
+        display: block;
+        margin: 0 auto;
+        float: none;
+        text-align: center;
+        width: 300px;
+      }
+    }
+
+    .description {
+      @extend .col-md-6, .offset-md-3;
+      @extend .col-xs-12;
+      padding-top: 7rem;
+      padding-bottom: 3.75rem;
+      color: #EEEEEE;
+
+      p {
+        font-size: 1.30rem;
+        font-weight: 300;
+      }
+
+      .button-actions {
+        a {
+          @extend .btn, .btn-lg;
+          background-color: #FF5722;
+          color: #EEEEEE;
+          &:hover, &:focus, &:active {
+            color: darken(#EEEEEE, 5%);
+          }
+        }
+      }
+    }
+  }
+}

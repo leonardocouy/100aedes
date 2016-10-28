@@ -1,0 +1,231 @@
+{% load compress %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <base href="/">
+    <title>100aedes</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="100aedes - seja um super cidadão e auxilie no combate ao mosquito da dengue">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no"/>
+
+
+    <!-- CSS -->
+  <link rel="stylesheet" href="{% static 'css/app.css' %}">
+    {% compress css %}
+{#      <link rel="stylesheet" type="text/x-scss" href="{% static 'css/app.scss' %}">#}
+      <link rel="stylesheet" type="text/x-scss" href="{% static 'libs/font-awesome/scss/font-awesome.scss' %}">
+    {% endcompress %}
+
+
+
+  </head>
+
+  <body ng-controller="HomeController as vm">
+    <nav>
+        <!-- Sandwich Button if in mobile -->
+        <button class="menu-toggle-mobile" type="button" data-toggle="collapse" data-target="#menu"
+                aria-controls="menu" aria-expanded="false" aria-label="Navegação">
+            &#9776;
+        </button>
+
+        <div class="logo">
+            <img src="{% static 'img/logo.png' %}">
+        </div>
+
+        <div id="menu">
+
+            <ul class="menu-sections">
+                <li><a href="#header">Início</a></li>
+                <li><a href="#idea">A Ideia</a></li>
+                <li><a href="#monitorarFocos">Monitorar Focos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="header">
+        <div class="content">
+            <div class="mockup-app">
+                <img class="mockup-image" src="{% static 'img/mockup.png' %}"/>
+            </div>
+            <div class="description">
+                <h1>Seja um super cidadão!</h1>
+                <p>O aplicativo 100aedes é totalmente grátis! Você pode se tornar um super cidadão
+                denunciando os possíveis focos existentes  do mosquito <i>Aedes aegypti</i> em sua cidade.
+                Comece a ajudar sua cidade agora</p>
+                <div class="button-actions">
+                    <a href="#idea" class="btn">Conheça a ideia!</a>
+{#                    <img class="playstore" src="{% static 'img/playstore.png' %}"/>#}
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="idea">
+        <div class="title">
+            <h1> a ideia </h1>
+            <div class="section-title"></div>
+        </div>
+
+        <div class="video">
+            <iframe class="embed-responsive-item" src="//www.youtube.com/embed/3-UGnDe8LNo" allowfullscreen></iframe>
+        </div>
+
+        <div class="about-powers">
+            <div class="title">
+                <h1> super poderes </h1>
+                <div class="section-title"></div>
+            </div>
+
+            <div class="description">
+                <p> Os heróis da cidade junto a combinação de seus poderes podem rapidamente eliminar todo o criadouro do mosquito Aedes aegypti da cidade.</p>
+            </div>
+
+            <div class="characteristics">
+                <div class="character">
+                   <div class="characteristics-header">
+                       <h4>Super Cidadão</h4>
+                       <h6>Poder da Denúncia</h6>
+                   </div>
+                    <div class="characteristics-item">
+                        <p>O cidadão pode se tornar um super cidadão, utilizando o aplicativo <b>100aedes</b> disponível na Play Store para
+                            denunciar possíveis focos do mosquito <i> Aedes aegypti </i> em sua cidade.</p>
+                    </div>
+                    <div class="characteristics-footer">
+                        <p class="footer">Tá esperando o quê? Seja um super cidadão com nosso aplicativo!</p>
+                        <a href="#" class="btn">Quero ser super cidadão!</a>
+                    </div>
+                </div>
+                <div class="character">
+                   <div class="characteristics-header">
+                        <h4>Super Agente</h4>
+                        <h6>Poder da Validação</h6>
+                   </div>
+                    <div class="characteristics-item">
+                        <p>O agente epidemiológico terá um aplicativo exclusivo disponibilizado pela prefeitura da cidade credenciada,
+                            no qual, poderá exercer os poderes para validar as denúncias que os usuários realizaram.</p>
+                    </div>
+                    <div class="characteristics-footer">
+                        <p class="footer">Você é um agente e sua cidade não possui suporte ao 100aedes?</p>
+                        <a href="#contato" class="btn">Entrar em contato!</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="monitorarFocos">
+        <div class="content">
+            <div class="title">
+                <h1> monitorar focos </h1>
+                <div class="section-title"></div>
+            </div>
+
+            <div class="description">
+                <p>Acompanhe as denúncias de possíveis criadouros do mosquito <b><i>Aedes aegypti</i></b> na cidade de Bom Despacho, no mapa abaixo.</p>
+            </div>
+
+
+            <div class="maps">
+
+                <ui-gmap-google-map center='vm.map.center' zoom='vm.map.zoom' options='vm.map.options' ng-cloak>
+                    <ui-gmap-layer namespace="visualization" type="HeatmapLayer" show='vm.map.showHeat' onCreated='vm.map.heatLayerCallback'></ui-gmap-layer>
+                </ui-gmap-google-map>
+
+                <div class="explanation">
+
+                  <strong>OBSERVAÇÃO:</strong> O mapa acima demonstra a região de possíveis focos denunciados, assim que resolvidos, as marcações não serão mais exibidas no mapa.
+                  No entanto, você pode ver o <a href="#reportsChart" class="alert-link"> histórico atual de denúncias da cidade de Bom Despacho</a>.
+
+                </div>
+                <highchart id="reportsChart" config="vm.reportsChartConfig"></highchart>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <div class="title">
+            <h1> contato </h1>
+            <div class="section-title"></div>
+        </div>
+
+
+        <form action="/" method="post">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            {% include "form_bs4_snippet.html" %}
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+
+        <div class="social-medias">
+            <h4>Redes Sociais</h4>
+            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+        </div>
+    </section>
+
+    <section id="infos">
+        <div class="content">
+            <div class="about">
+                <h4> Sobre </h4>
+                <div class="line"></div>
+                <p>Este projeto tem como propósito incentivar a participação do
+                    cidadão no combate do mosquito Aedes aegypti.</p>
+            </div>
+            <div class="download_app">
+                <h4> Baixe nosso aplicativo </h4>
+                <div class="line"></div>
+                <img  src="{% static 'img/playstore.png' %}"/>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="content">
+        <span>Todos os direitos reservados para <a href="http://100aedes.com.br">100aedes</a> - 2016 </span>
+        </div>
+    </footer>
+
+    <script>
+        {% for message in messages %}
+            alert("{{ message }}");
+        {% endfor %}
+    </script>
+
+    <script src='//maps.googleapis.com/maps/api/js?key=AIzaSyBf70dIWamtTkr7Yi6d5bXGsfClTFQc4AI&libraries=visualization&sensor=false'></script>
+{#    {% compress js %}#}
+
+    <script src="https://code.highcharts.com/stock/highstock.src.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <!-- Libs -->
+
+    <script src="{% static "libs/angular/angular.min.js" %}"></script>
+    <script src="{% static "libs/angular-route/angular-route.js" %}"></script>
+    <script src="{% static "libs/jquery/dist/jquery.min.js" %}"></script>
+    <script src="{% static "libs/bootstrap/dist/js/bootstrap.min.js" %}"></script>
+    <script src="{% static "libs/highcharts-ng/dist/highcharts-ng.min.js" %}"></script>
+
+    <!-- Google Maps -->
+    <script src="{% static "libs/lodash/dist/lodash.min.js" %}"></script>
+    <script src="{% static "libs/angular-simple-logger/dist/angular-simple-logger.min.js" %}"></script>
+    <script src="{% static "libs/angular-google-maps/dist/angular-google-maps.min.js" %}"></script>
+
+    <script src="{% static "dist/app.js" %}"></script>
+{#    {% compress js %}#}
+    <!-- App -->
+{#    <script src="{% static "js/app/app.module.js" %}"></script>#}
+{#    <script src="{% static "js/app/app.constants.js" %}"></script>#}
+{#    <script src="{% static "js/app/app.config.js" %}"></script>#}
+{#    <script src="{% static "js/app/app.run.js" %}"></script>#}
+{#    <script src="{% static "js/app/home/home.routes.js" %}"></script>#}
+{#    <script src="{% static "js/app/home/home.service.js" %}"></script>#}
+{#    <script src="{% static "js/app/home/home.controller.js" %}"></script>#}
+
+{#    {% endcompress %}#}
+
+  </body>
+</html>

@@ -33,3 +33,9 @@ urlpatterns = [
     url(r'^api/v1/reports/', include(reports_urls)),
     url(r'^api/v1/users/', include(users_urls))
 ]
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns += [
+        url(r'^__debug__/', include(debug_toolbar.urls)),
+    ]

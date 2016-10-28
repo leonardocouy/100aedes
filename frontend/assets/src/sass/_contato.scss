@@ -1,0 +1,33 @@
+#contato {
+  @extend .container;
+  padding-bottom: 3.75rem;
+
+  form {
+    @extend .col-md-6, .col-xs-12;
+    
+    label {
+      font-size: 1.25rem;
+    }
+
+    button {
+      @extend .btn-lg;
+      padding: 0.5rem 2.5rem;
+      background-color: #FF5722;
+      color: #EEEEEE;
+      &:hover, &:focus, &:active {
+        color: darken(#EEEEEE, 5%);
+      }
+    }
+
+  }
+
+  .social-medias {
+    @extend .col-md-6, .col-xs-12;
+
+
+    i {
+      color: #222831;
+      font-size: 3rem;
+    }
+  }
+}

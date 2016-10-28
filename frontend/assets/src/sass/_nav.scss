@@ -1,0 +1,58 @@
+nav {
+  @extend .navbar, .navbar-fixed-top;
+  background-color: lighten(#222831, 1%);
+  width: 100%;
+  min-height: 3rem;
+  padding: 1rem 1rem;
+
+  .logo {
+    @extend .navbar-brand;
+
+    img {
+      float: left;
+      width: 5rem;
+    }
+  }
+
+  #menu {
+    @extend .collapse, .navbar-toggleable-xs; // collapse menu when in mobile mode
+    .menu-sections{
+      @extend .nav, .navbar-nav;
+      @extend .pull-md-right; // pull menu to right
+
+
+      @media(max-width: map-get($grid-breakpoints, sm)){
+          margin-top: 3rem;
+      }
+
+      li {
+        @extend .nav-item;
+        margin-left: 1rem;
+        a{
+          @extend .nav-link;
+
+          font-size: 1rem;
+          font-weight: 500;
+          text-transform: uppercase;
+          color: #EEEEEE;
+          display: block;
+          &:hover, &:focus, &:active {
+            display: inline-block;
+            box-shadow: 0 1px #FF5722;
+          }
+        }
+      }
+    }
+
+  }
+
+  .menu-toggle-mobile{
+    @extend .navbar-toggler;
+    @extend .hidden-sm-up; // hide menu when in mobile mode
+    @extend .pull-xs-right; // pull menu to right
+    border: solid 1px #FF5722;
+    background-color: lighten(#222831, 4%);
+    color: #EEEEEE;
+  }
+
+}

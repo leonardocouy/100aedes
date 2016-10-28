@@ -10,7 +10,7 @@ from .utils import _send_mail
 
 class HomeView(View):
     form = ContactForm
-    template_name = 'base.html'
+    template_name = 'templates/index.html'
 
     def get(self, request, *args, **kwargs):
         form = ContactForm()

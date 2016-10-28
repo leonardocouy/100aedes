@@ -1,0 +1,11 @@
+Sugestão enviada por {{ contact.name }} - {{ contact.email }}
+
+Assunto: {{ contact.subject }}
+
+Mensagem: {{ contact.message }}
+
+Atenciosamente,
+
+----
+
+Equipe 100aedes.
