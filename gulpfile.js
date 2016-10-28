@@ -38,32 +38,32 @@ var concatOrderSources = [
 gulp.task('default', ['sass', 'ng-config', 'scripts']);
 
 gulp.task('sass', function() {
-  return gulp.src('assets/src/sass/**/*.scss')
+  return gulp.src('frontend/assets/src/sass/**/*.scss')
       .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-      .pipe(gulp.dest('assets/css'))
+      .pipe(gulp.dest('frontend/assets/css'))
 });
 
 
 // ['assets/js/vendor/lodash/*.js', 'assets/js/vendor/jquery/*.js', 'assets/js/vendor/!(lodash, jquery)**/*.js', 'assets/js/app/*.js'
 gulp.task('scripts', function() {
-  return gulp.src(['assets/js/app/app.module.js', 'assets/js/app/!(app.module)*.js','assets/js/app/home/*.js'])
+  return gulp.src(['frontend/assets/js/app/app.module.js', 'frontend/assets/js/app/!(app.module)*.js','frontend/assets/js/app/home/*.js'])
       .pipe(sourcemaps.init())
         .pipe(concat('app.min.js'))
         .pipe(ngAnnotate({add: true}))
         .pipe(uglify())
       .pipe(sourcemaps.write())
-      .pipe(gulp.dest('assets/dist/'));
+      .pipe(gulp.dest('frontend/assets/dist/'));
 });
 
 
 gulp.task('ng-config', function(){
-  fs.writeFileSync('./config.json', JSON.stringify(config[ENV]));
-  return gulp.src('./config.json')
+  fs.writeFileSync('./frontend/config.json', JSON.stringify(config[ENV]));
+  return gulp.src('./frontend/config.json')
       .pipe(ngConfig('app', {
         createModule: false,
         pretty: true,
         wrap: true
       }))
       .pipe(rename('app.constants.js'))
-      .pipe(gulp.dest('assets/js/app/'))
+      .pipe(gulp.dest('frontend/assets/js/app/'))
 });
