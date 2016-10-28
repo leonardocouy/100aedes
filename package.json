@@ -3,15 +3,15 @@
   "version": "1.0.0",
   "description": "Frontend development",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "frontend"
   ],
   "author": "Leonardo Flores",
   "license": "ISC",
-    "devDependencies": {
+  "scripts": {
+    "postinstall": "./node_modules/.bin/gulp build"
+  },
+  "dependencies": {
     "dotenv": "^2.0.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",

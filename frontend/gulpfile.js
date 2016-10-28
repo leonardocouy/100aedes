@@ -35,7 +35,7 @@ var concatOrderSources = [
   'assets/js/app/home/*.js'
 ];
 
-gulp.task('default', ['sass']);
+gulp.task('default', ['sass', 'ng-config', 'scripts']);
 
 gulp.task('sass', function() {
   return gulp.src('assets/src/sass/**/*.scss')

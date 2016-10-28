@@ -11,3 +11,5 @@ cover
 staticfiles
 media
 .vagrant
+/node_modules
+npm-debug.log
