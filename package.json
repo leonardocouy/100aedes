@@ -8,6 +8,9 @@
   ],
   "author": "Leonardo Flores",
   "license": "ISC",
+  "scripts": {
+    "postinstall": "./node_modules/.bin/gulp build"
+  },
   "dependencies": {
     "dotenv": "^2.0.0",
     "gulp": "^3.9.1",
