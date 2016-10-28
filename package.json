@@ -1,5 +1,17 @@
 {
-  "devDependencies": {
+  "name": "100aedes",
+  "version": "1.0.0",
+  "description": "Frontend development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "frontend"
+  ],
+  "author": "Leonardo Flores",
+  "license": "ISC",
+    "devDependencies": {
     "dotenv": "^2.0.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
@@ -12,4 +24,5 @@
     "gulp-uglify": "^2.0.0",
     "gulp-uglify-inline": "^0.1.1"
   }
+
 }
