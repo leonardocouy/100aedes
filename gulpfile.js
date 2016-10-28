@@ -47,14 +47,21 @@ gulp.task('sass', function() {
 // ['assets/js/vendor/lodash/*.js', 'assets/js/vendor/jquery/*.js', 'assets/js/vendor/!(lodash, jquery)**/*.js', 'assets/js/app/*.js'
 gulp.task('scripts', function() {
   return gulp.src(['frontend/assets/js/app/app.module.js', 'frontend/assets/js/app/!(app.module)*.js','frontend/assets/js/app/home/*.js'])
-      .pipe(sourcemaps.init())
-        .pipe(concat('app.min.js'))
-        .pipe(ngAnnotate({add: true}))
-        .pipe(uglify())
-      .pipe(sourcemaps.write())
+      .pipe(concat('app.min.js'))
+      .pipe(ngAnnotate({add: true}))
+      .pipe(uglify())
       .pipe(gulp.dest('frontend/assets/dist/'));
 });
 
+// gulp.task('scripts', function() {
+//   return gulp.src(['frontend/assets/js/app/app.module.js', 'frontend/assets/js/app/!(app.module)*.js','frontend/assets/js/app/home/*.js'])
+//       .pipe(sourcemaps.init())
+//         .pipe(concat('app.min.js'))
+//         .pipe(ngAnnotate({add: true}))
+//         .pipe(uglify())
+//       .pipe(sourcemaps.write())
+//       .pipe(gulp.dest('frontend/assets/dist/'));
+// });
 
 gulp.task('ng-config', function(){
   fs.writeFileSync('./frontend/config.json', JSON.stringify(config[ENV]));
