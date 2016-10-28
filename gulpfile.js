@@ -1,7 +1,7 @@
 var ENV = process.env.APP_ENV || 'development';
 
 if (ENV === 'development') {
-  require('dotenv').load({path: '../.env'});
+  require('dotenv').load();
 }
 
 var gulp = require('gulp');

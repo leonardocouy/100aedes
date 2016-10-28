@@ -34,13 +34,16 @@
       }
 
       .button-actions {
-        a {
+        a.btn {
           @extend .btn, .btn-lg;
           background-color: #FF5722;
           color: #EEEEEE;
           &:hover, &:focus, &:active {
             color: darken(#EEEEEE, 5%);
           }
+        }
+        img{
+          width: 180px;
         }
       }
     }
