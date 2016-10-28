@@ -14,7 +14,6 @@ var rename = require ('gulp-rename');
 var fs = require('fs');
 var config = require('./frontend/config.js');
 var uglifyInline = require('gulp-uglify-inline');
-var sourcemaps = require('gulp-sourcemaps');
 var order = require("gulp-order");
 var vendorPath = "assets/js/vendor/";
 
@@ -52,16 +51,6 @@ gulp.task('scripts', function() {
       .pipe(uglify())
       .pipe(gulp.dest('frontend/assets/dist/'));
 });
-
-// gulp.task('scripts', function() {
-//   return gulp.src(['frontend/assets/js/app/app.module.js', 'frontend/assets/js/app/!(app.module)*.js','frontend/assets/js/app/home/*.js'])
-//       .pipe(sourcemaps.init())
-//         .pipe(concat('app.min.js'))
-//         .pipe(ngAnnotate({add: true}))
-//         .pipe(uglify())
-//       .pipe(sourcemaps.write())
-//       .pipe(gulp.dest('frontend/assets/dist/'));
-// });
 
 gulp.task('ng-config', function(){
   fs.writeFileSync('./frontend/config.json', JSON.stringify(config[ENV]));
