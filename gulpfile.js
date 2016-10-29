@@ -45,7 +45,7 @@ gulp.task('sass', function() {
 // ['assets/js/vendor/lodash/*.js', 'assets/js/vendor/jquery/*.js', 'assets/js/vendor/!(lodash, jquery)**/*.js', 'assets/js/app/*.js'
 gulp.task('scripts', function() {
   return gulp.src(['frontend/assets/js/app/app.module.js', 'frontend/assets/js/app/!(app.module)*.js','frontend/assets/js/app/home/*.js'])
-      .pipe(concat('app.min.js'))
+      .pipe(concat('app.js'))
       .pipe(ngAnnotate({add: true}))
       .pipe(uglify())
       .pipe(gulp.dest('frontend/assets/dist/'));
