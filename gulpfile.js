@@ -42,7 +42,7 @@ gulp.task('sass', function() {
 });
 
 
-// ['asets/js/vendor/lodash/*.js', 'assets/js/vendor/jquery/*.js', 'assets/js/vendor/!(lodash, jquery)**/*.js', 'assets/js/app/*.js'
+// ['asets/js/vendorlodash/*.js', 'assets/js/vendor/jquery/*.js', 'assets/js/vendor/!(lodash, jquery)**/*.js', 'assets/js/app/*.js'
 gulp.task('scripts', function() {
   return gulp.src(['frontend/assets/js/app/app.module.js', 'frontend/assets/js/app/!(app.module)*.js','frontend/assets/js/app/home/*.js'])
       .pipe(concat('app.js'))
