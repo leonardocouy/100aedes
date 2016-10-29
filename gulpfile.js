@@ -13,7 +13,6 @@ var ngConfig = require('gulp-ng-config');
 var rename = require ('gulp-rename');
 var fs = require('fs');
 var config = require('./frontend/config.js');
-var uglifyInline = require('gulp-uglify-inline');
 var order = require("gulp-order");
 var vendorPath = "assets/js/vendor/";
 
