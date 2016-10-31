@@ -23,5 +23,5 @@
     "gulp-uglify": "^2.0.0",
     "main-bower-files": "^2.13.1",
     "gulp-add-src": "^0.2.0"
-  },
+  }
 }
