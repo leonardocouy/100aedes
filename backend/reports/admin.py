@@ -8,9 +8,15 @@ class ReportAdmin(admin.ModelAdmin):
     list_display = ('get_first_name', 'get_phone', 'get_email', 'created_at', 'address', 'district',
                     'get_city_and_state', 'modified_at', 'status',)
     list_filter = ('status', 'city__name', 'created_at',)
+    readonly_fields = ('location', )
     actions = ['accept', 'reject', 'pending']
     exclude = ['Permissions']
     READ_ONLY_GROUPS = ("Agente",)
+
+    def location(self, instance):
+        return '<a target="_blank" href="http://maps.google.com/maps?q=loc:{},{}">Abrir localização no Google Maps</a>'.format(instance.latitude, instance.longitude)
+    location.allow_tags = True
+    location.short_description = "Localização"
 
     def get_first_name(self, obj):
         return obj.user.first_name
@@ -55,9 +61,7 @@ class ReadOnlyReportAdmin(ReportAdmin):
 
     def has_change_permission(self, request, obj=None):
         if self._user_is_readonly(request):
-            self.readonly_fields = [f.name for f in self.model._meta.fields]
-        else:
-            self.readonly_fields = ()
+            self.readonly_fields += [f.name for f in self.model._meta.fields]
         return True
 
     def get_actions(self, request):
