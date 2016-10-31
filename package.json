@@ -20,14 +20,8 @@
     "gulp-order": "^1.1.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
-    "gulp-sourcemaps": "^2.2.0",
     "gulp-uglify": "^2.0.0",
-    "gulp-uglify-inline": "^0.1.1"
+    "main-bower-files": "^2.13.1",
+    "gulp-add-src": "^0.2.0"
   },
-  "devDependencies": {
-    "gulp-add-src": "^0.2.0",
-    "gulp-angular-filesort": "^1.1.1",
-    "gulp-concat-vendor": "0.0.4",
-    "main-bower-files": "^2.13.1"
-  }
 }

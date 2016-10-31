@@ -12,16 +12,11 @@ var ngAnnotate = require('gulp-ng-annotate');
 var ngConfig = require('gulp-ng-config');
 var rename = require ('gulp-rename');
 var fs = require('fs');
-var config = require('./frontend/config.js');
-var order = require("gulp-order");
-var sourcemaps = require('gulp-sourcemaps');
-var vendor = require('gulp-concat-vendor');
 var mainBowerFiles = require('main-bower-files');
-var print = require('gulp-print');
 var addsrc = require('gulp-add-src');
+var config = require('./frontend/config.js');
 
-
-gulp.task('default', ['sass', 'config-env', 'dist']);
+gulp.task('build', ['sass', 'config-env', 'dist']);
 
 gulp.task('sass', function() {
   return gulp.src('frontend/assets/src/sass/**/*.scss')
@@ -49,7 +44,6 @@ gulp.task('dist', function() {
       }
     }))
     .pipe(addsrc.append(['frontend/assets/js/app/app.module.js', 'frontend/assets/js/app/!(app.module)*.js','frontend/assets/js/app/home/*.js']))
-    .pipe(print())
     .pipe(concat('bundle.min.js'))
     .pipe(ngAnnotate())
     .pipe(uglify())
