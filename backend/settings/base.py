@@ -46,7 +46,6 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'compressor',
     'rest_framework',
     'backend.reports.apps.ReportsConfig',
     'backend.core.apps.CoreConfig',
@@ -134,16 +133,7 @@ AUTH_USER_MODEL = 'accounts.User'
 # Compile same file using the template tag like: {% compress css/js %} and
 # didn`t forget to load compress.
 
-STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'compressor.finders.CompressorFinder'
-)
-
-
 STATIC_ROOT = os.path.join(FRONTEND_DIR, 'staticfiles')
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-# STATIC_URL = '/static/'
 STATIC_URL = '/assets/'
 STATICFILES_DIRS = (
     os.path.join(FRONTEND_DIR, 'assets'),
@@ -151,14 +141,6 @@ STATICFILES_DIRS = (
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-
-# django-compressor settings
-
-COMPRESS_ENABLED = True
-COMPRESS_OFFLINE = config('COMPRESS_OFFLINE', default=False, cast=bool) # true if in production
-COMPRESS_PRECOMPILERS = (
-    ('text/x-scss', 'sassc {infile} {outfile}'),
-)
 
 # JWT TOKEN CONFIGS
 
@@ -182,4 +164,4 @@ ADMIN_SITE_HEADER = "Painel de Administração - 100aedes"
 
 # Playstore link
 
-PLAYSTORE_URL = 'https://play.google.com/store/apps/details?id=com.ionicframework.agroque795635'
+PLAYSTORE_URL = 'https://play.google.com/store/apps/details?id=br.com.o100aedes'

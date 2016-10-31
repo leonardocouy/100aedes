@@ -23,6 +23,11 @@
     "gulp-sourcemaps": "^2.2.0",
     "gulp-uglify": "^2.0.0",
     "gulp-uglify-inline": "^0.1.1"
+  },
+  "devDependencies": {
+    "gulp-add-src": "^0.2.0",
+    "gulp-angular-filesort": "^1.1.1",
+    "gulp-concat-vendor": "0.0.4",
+    "main-bower-files": "^2.13.1"
   }
-
 }

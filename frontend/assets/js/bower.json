@@ -18,9 +18,14 @@
   ],
   "dependencies": {
     "angular": "~1.5.8",
-    "angular-ui-router": "~0.3.1",
     "angular-route": "~1.5.8",
-    "font-awesome": "fontawesome#~4.6.3",
-    "angular-google-maps": "~2.4.0"
+    "angular-google-maps": "~2.4.0",
+    "bootstrap": "bootstrap#v4.0.0-alpha.5",
+    "highcharts-ng": "~0.0.13"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": "dist/js/bootstrap.js"
+    }
   }
 }

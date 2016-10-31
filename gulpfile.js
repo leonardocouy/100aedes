@@ -14,44 +14,22 @@ var rename = require ('gulp-rename');
 var fs = require('fs');
 var config = require('./frontend/config.js');
 var order = require("gulp-order");
-var vendorPath = "assets/js/vendor/";
+var sourcemaps = require('gulp-sourcemaps');
+var vendor = require('gulp-concat-vendor');
+var mainBowerFiles = require('main-bower-files');
+var print = require('gulp-print');
+var addsrc = require('gulp-add-src');
 
 
-var concatOrderSources = [
-  vendorPath + 'angular/*.js',
-  vendorPath + 'angular-route/*.js',
-  vendorPath + 'jquery/*.js',
-  vendorPath + 'bootstrap/*.js',
-  vendorPath + 'highcharts-ng/*.js',
-  vendorPath + 'lodash/*.js',
-  vendorPath + 'angular-simple-logger/*.js',
-  vendorPath + 'angular-google-maps/*.js',
-  'assets/js/app/app.module.js',
-  'assets/js/app/app.constants.js',
-  'assets/js/app/app.config.js',
-  'assets/js/app/app.run.js',
-  'assets/js/app/home/*.js'
-];
-
-gulp.task('default', ['sass', 'ng-config', 'scripts']);
+gulp.task('default', ['sass', 'config-env', 'dist']);
 
 gulp.task('sass', function() {
   return gulp.src('frontend/assets/src/sass/**/*.scss')
       .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-      .pipe(gulp.dest('frontend/assets/css'))
+      .pipe(gulp.dest('frontend/assets/dist/'))
 });
 
-
-// ['asets/js/vendorlodash/*.jxs', 'assets/js/vendor/jquery/*.js', 'assets/js/vendor/!(lodash, jquery)**/*.js', 'assets/js/app/*.js'
-gulp.task('scripts', function() {
-  return gulp.src(['frontend/assets/js/app/app.module.js', 'frontend/assets/js/app/!(app.module)*.js','frontend/assets/js/app/home/*.js'])
-      .pipe(concat('app.min.js'))
-      .pipe(ngAnnotate({add: true}))
-      .pipe(uglify())
-      .pipe(gulp.dest('frontend/assets/dist/'));
-});
-
-gulp.task('ng-config', function(){
+gulp.task('config-env', function(){
   fs.writeFileSync('./frontend/config.json', JSON.stringify(config[ENV]));
   return gulp.src('./frontend/config.json')
       .pipe(ngConfig('app', {
@@ -62,3 +40,20 @@ gulp.task('ng-config', function(){
       .pipe(rename('app.constants.js'))
       .pipe(gulp.dest('frontend/assets/js/app/'))
 });
+
+gulp.task('dist', function() {
+    return gulp.src(mainBowerFiles({
+      paths: {
+        bowerDirectory: 'frontend/assets/js/bower_components',
+        bowerJson: 'frontend/assets/js/bower.json'
+      }
+    }))
+    .pipe(addsrc.append(['frontend/assets/js/app/app.module.js', 'frontend/assets/js/app/!(app.module)*.js','frontend/assets/js/app/home/*.js']))
+    .pipe(print())
+    .pipe(concat('bundle.min.js'))
+    .pipe(ngAnnotate())
+    .pipe(uglify())
+    .pipe(gulp.dest('frontend/assets/dist/'));
+});
+
+
