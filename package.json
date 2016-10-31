@@ -9,7 +9,7 @@
   "author": "Leonardo Flores",
   "license": "ISC",
   "scripts": {
-    "postinstall": "gulp default"
+    "postinstall": "gulp build"
   },
   "dependencies": {
     "dotenv": "^2.0.0",
