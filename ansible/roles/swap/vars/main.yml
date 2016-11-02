@@ -1,0 +1,4 @@
+# Swap settings
+swap_file_size_kb: 1024
+swap_file_path: /swapfile
+

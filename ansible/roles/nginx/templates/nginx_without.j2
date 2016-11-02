@@ -12,7 +12,7 @@ server {
     access_log {{ nginx_access_log }};
     error_log {{ nginx_error_log }} warn;
 
-    location /static/ {
+    location /assets/ {
         autoindex on;
         alias  {{ nginx_static_dir }};
     }

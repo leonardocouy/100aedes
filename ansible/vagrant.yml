@@ -7,6 +7,7 @@
     - env_vars/base.yml
     - env_vars/development.yml
   roles:
+    - {role: swap, when: create_swap_file}
     - common
     - mysql
     - project

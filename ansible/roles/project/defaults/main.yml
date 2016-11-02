@@ -9,3 +9,6 @@ ssh_private_key: ~/.ssh/id_rsa
 
 #SSL
 nginx_strong_dh_group: yes
+
+#Bower
+bower_path: "{{ project_path }}/{{ frontend_dirname }}/assets/js"

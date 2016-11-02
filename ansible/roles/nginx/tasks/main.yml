@@ -6,11 +6,19 @@
      update_cache: yes
      state: installed
 
-- name: Create the Nginx configuration file
+- name: Create the Nginx SSL configuration file
   template:
     src: templates/nginx.j2
     dest: "/etc/nginx/conf.d/{{ project_name }}.conf"
   notify: restart nginx
+  when: nginx_use_ssl
+
+- name: Create the Nginx non-SSL configuration file
+  template:
+    src: templates/nginx_without.j2
+    dest: "/etc/nginx/conf.d/{{ project_name }}.conf"
+  notify: restart nginx
+  when: not nginx_use_ssl
 
 - name: Disable default nginx site
   file:

@@ -28,13 +28,18 @@
 default_locale: en_US.UTF-8
 project_name: "100aedes"
 application_name: "backend"
+frontend_dirname: "frontend"
 project_path: "/home/django/{{ project_name }}"
 virtualenv_path: "{{ project_path }}/venv"
 log_dir: "/var/log"
+create_swap_file: yes
+
+# SSL settings
+
 
 server_domain:
   development: "192.168.4.23"
-  staging: "staging.100aedes.com.br"
+  staging: "67.205.143.17"
   production: "100aedes.com.br"
 
 
@@ -66,5 +71,5 @@ django_settings_module:
 
 allowed_hosts:
   production: ['.100aedes.com', '.100aedes.com.br']
-  staging: ['.100aedes.com', '.100aedes.com.br']
+  staging: ['67.205.143.17', '.100aedes.com.br']
   development: ['192.168.4.23',]

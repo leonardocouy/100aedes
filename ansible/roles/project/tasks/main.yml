@@ -14,7 +14,7 @@
 
 - name: Ensure that a strong Diffie-Hellman group is used
   command: openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048 creates=/etc/ssl/certs/dhparam.pem
-  when: nginx_strong_dh_group is defined and nginx_strong_dh_group
+  when: nginx_strong_dh_group is defined and nginx_strong_dh_group and nginx_use_ssl
 
 - name: Setup Git Repository
   git:
@@ -65,6 +65,29 @@
     settings: "{{ django_settings_module[env_name] }}"
   when: load_initial_data is defined
 
+- name: Run NPM install
+  npm:
+    path: "{{ project_path }}"
+
+- name: Install bower and gulp
+  npm:
+    name: "{{ item }}"
+    state: present
+    global: yes
+  with_items:
+    - bower
+    - gulp
+
+- name: Install bower dependencies
+  bower:
+    path: "{{ bower_path }}"
+    state: present
+
+- name: Run gulp build
+  shell: gulp build
+  args:
+    chdir: "{{ project_path }}"
+
 - name: Run Django collectstatic
   django_manage:
     command: collectstatic
@@ -72,9 +95,3 @@
     virtualenv: "{{ virtualenv_path }}"
     settings: "{{ django_settings_module[env_name] }}"
 
-- name: Compress CSS/JS with django-compressor
-  django_manage:
-    command: compress
-    app_path: "{{ project_path }}"
-    virtualenv: "{{ virtualenv_path }}"
-    settings: "{{ django_settings_module[env_name] }}"

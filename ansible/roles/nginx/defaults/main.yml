@@ -1,12 +1,12 @@
 ---
 
-
+nginx_use_ssl: yes
 nginx_use_letsencrypt: yes
 letsencrypt_dir: "/etc/letsencrypt/live/{{ server_domain[env_name] }}"
 letsencrypt_cert_filename: fullchain.pem
 letsencrypt_privkey_filename: privkey.pem
 
-nginx_static_dir: "{{project_path}}/{{application_name}}/staticfiles/"
+nginx_static_dir: "{{ project_path }}/{{frontend_dirname}}/staticfiles/"
 nginx_media_dir: "{{project_path}}/{{application_name}}/media/"
 nginx_access_log: "{{ log_dir }}/nginx/{{project_name}}_access.log"
 nginx_error_log: "{{ log_dir }}/nginx/{{project_name}}_error.log"
