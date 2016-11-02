@@ -18,7 +18,7 @@ class HomeTest(TestCase):
         """
         Home must return a template
         """
-        self.assertTemplateUsed(self.resp, 'base.html')
+        self.assertTemplateUsed(self.resp, 'templates/index.html')
 
     def test_compile_scss_to_css(self):
         """

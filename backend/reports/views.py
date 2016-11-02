@@ -15,6 +15,10 @@ class ReportCreateReadView(ListCreateAPIView):
     authentication_classes = (JSONWebTokenAuthentication, )
 
     def get_queryset(self):
+        """
+        if user is a superuser or a "Agente" return all reports or
+        if it is an "Agente" return only Reports that is in analysis or sent
+        """
         user = self.request.user
         if user.is_superuser:
             return Report.objects.all()

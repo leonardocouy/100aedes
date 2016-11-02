@@ -1,5 +1,4 @@
 import json
-import unittest
 
 from django.forms import model_to_dict
 from django.urls import reverse
@@ -39,7 +38,6 @@ class UserAuthErrorsReportApiTest(APITestCase):
     def setUp(self):
         self.report = mommy.make_one(Report)
 
-    @unittest.skip("JWT Token is optional.")
     def test_user_cant_use_api(self):
         """
         Check if user has a INVALID JWT TOKEN authorizated else must return status code 401 NOT AUTHORIZATED
@@ -125,9 +123,9 @@ class ReadReportApiTest(APITestCase):
             'super_user': get_jwt_token(super_user)
         }
 
-        self.report1 = mommy.make_one(Report, description='have things here', user=user)
-        self.report2 = mommy.make_one(Report, description='have two things here', user=user)
-        self.report_user2 = mommy.make_one(Report, description='I am user 2', user=user2)
+        self.report1 = mommy.make_one(Report, description='have things here', user=user, status=1)
+        self.report2 = mommy.make_one(Report, description='have two things here', user=user, status=2)
+        self.report_user2 = mommy.make_one(Report, description='I am user 2', user=user2, status=1)
 
     def test_read_report_list(self):
         """
@@ -176,7 +174,6 @@ class ReadReportApiTest(APITestCase):
                 self.assertContains(response, self.report1.description)
                 self.assertContains(response, self.report2.description)
                 self.assertContains(response, self.report_user2.description)
-
 
 
 class ReadReportDetailErrorsApiTest(APITestCase):
