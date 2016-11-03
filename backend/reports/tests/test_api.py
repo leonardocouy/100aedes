@@ -138,17 +138,6 @@ class ReadReportApiTest(APITestCase):
         self.assertContains(response, self.report1.description)
         self.assertContains(response, self.report2.description)
 
-    def test_read_valid_report_details(self):
-        """
-        GET at /api/v1/reports/report_id
-        Must return status code 200 OK and
-        check if reports are being shown
-        """
-        response = self.client.get(reverse('report-detail', kwargs={'pk': self.report1.pk}),
-                                   HTTP_AUTHORIZATION=self.jwt_authorizations['user_1'])
-        self.assertEqual(200, response.status_code)
-        self.assertContains(response, self.report1.description)
-
     def test_can_read_only_own_reports(self):
         """
         GET at /api/v1/reports/
@@ -203,69 +192,94 @@ class ReadReportDetailErrorsApiTest(APITestCase):
         self.assertEqual(403, response.status_code)
 
 
-class UpdateReportApiTest(APITestCase):
+class UpdateDeleteReportApiTest(APITestCase):
     def setUp(self):
+        group = mommy.make_recipe('backend.core.group', name='Agente')
         user = mommy.make_recipe('backend.core.user')
-        self.jwt_authorization = get_jwt_token(user)
-        self.report = mommy.make_one(Report, city__name='Bom Despacho', user=user, _fill_optional=True)
+        super_user = mommy.make_recipe('backend.core.user', username='superuser', is_superuser=True)
 
-    def test_update_report(self):
+        ''' Create a agent user with group Agente'''
+        agent_user = mommy.make_recipe('backend.core.user', username='test_agent')
+        agent_user.groups.add(group)
+        agent_user.save()
+
+        self.jwt_authorizations = {
+            'user': get_jwt_token(user),
+            'agent_user': get_jwt_token(agent_user),
+            'super_user': get_jwt_token(super_user)
+        }
+
+        self.report = mommy.make_one(Report, city__name='Bom Despacho', user=user)
+
+    def test_agent_can_update_any_reports(self):
         """
-        PUT /api/v1/reports/report_id/ must return status code 200 OK and
-        return data updated
+        PATCH at /api/v1/reports/
+        Should update a report made by another user
+        but user must be a superuser or agent
         """
         self.report.description = 'Changed'
-        data = model_to_dict(self.report)
-        response = self.client.put(reverse('report-detail', kwargs={'pk': self.report.pk}), data,
-                                   HTTP_AUTHORIZATION=self.jwt_authorization)
-        response_data = json.loads(response.content.decode('utf8'))
-        self.assertEqual(200, response.status_code)
-        self.assertEqual(response_data['description'], 'Changed')
+        data = {'description': 'Changed'}
+        users_token = [self.jwt_authorizations['agent_user'], self.jwt_authorizations['super_user']]
+        with self.subTest():
+            for expected in users_token:
+                response = self.client.patch(reverse('report-detail', kwargs={'pk': self.report.pk}), data,
+                                             HTTP_AUTHORIZATION=expected)
+                response_data = json.loads(response.content.decode('utf8'))
+                self.assertEqual(200, response.status_code)
+                self.assertEqual(response_data['description'], 'Changed')
+
+    def test_agent_can_delete_any_reports(self):
+        """
+        A super-user or agent can DELETE User's reports at /api/v1/reports/report_id/
+        Must return status code 204 NO CONTENT
+        """
+        response = self.client.delete(reverse('report-detail', kwargs={'pk': self.report.pk}),
+                                      HTTP_AUTHORIZATION=self.jwt_authorizations['agent_user'])
+        self.assertEqual(204, response.status_code)
 
 
-class UpdateInvalidReportApiTest(APITestCase):
+class UpdateDeleteInvalidReportApiTest(APITestCase):
     def setUp(self):
-        user = mommy.make_recipe('backend.core.user')
-        jwt_authorization = get_jwt_token(user)
-        self.report = mommy.make_one(Report, city__name='Bom Despacho', user=user, _fill_optional=True)
+        self.user = mommy.make_recipe('backend.core.user')
+        self.report = mommy.make_one(Report, city__name='Bom Despacho', user=self.user, _fill_optional=True)
         self.report.city = None
-        data = model_to_dict(self.report)
-        self.resp = self.client.put(reverse('report-detail', kwargs={'pk': self.report.pk}), data,
-                                    HTTP_AUTHORIZATION=jwt_authorization)
+        self.data = model_to_dict(self.report)
+        ''' Create a agent user with group Agente'''
+        group = mommy.make_recipe('backend.core.group', name='Agente')
+        self.agent_user = mommy.make_recipe('backend.core.user', username='test_agent')
+        self.agent_user.groups.add(group)
+        self.agent_user.save()
+
+    def test_user_cant_update(self):
+        """
+        An user can't update report at /api/v1/reports/report_id/
+        Must return status code 403 FORBIDDEN
+        """
+        jwt_authorization = get_jwt_token(self.user)
+
+        resp = self.client.put(reverse('report-detail', kwargs={'pk': self.report.pk}), self.data,
+                               HTTP_AUTHORIZATION=jwt_authorization)
+        self.assertEqual(403, resp.status_code)
+
+    def test_user_cant_delete(self):
+        """
+        An user can't delete report at /api/v1/reports/report_id/
+        Must return status code 403 FORBIDDEN
+        """
+        jwt_authorization = get_jwt_token(self.user)
+        resp = self.client.delete(reverse('report-detail', kwargs={'pk': self.report.pk}),
+                                  HTTP_AUTHORIZATION=jwt_authorization)
+        self.assertEqual(403, resp.status_code)
 
     def test_update_invalid_report(self):
         """
         PUT invalid report at /api/v1/reports/report_id/
-        Must return status code 400 BAD REQUEST
+        Must return status code 400 BAD REQUEST with ERRORS
+        And check if Report have not changed
         """
-        self.assertEqual(400, self.resp.status_code)
-
-    def test_has_errors(self):
-        """
-        Context must return errors
-        """
-        self.assertTrue(self.resp.data.serializer.errors)
-
-    def test_save_invalid_report(self):
-        """
-        Check if invalid updated report has not been saved
-        """
-        original_report = Report.objects.get(pk=self.report.pk)
-        self.assertTrue(original_report.city)
-
-
-class DeleteReportApiTest(APITestCase):
-    def setUp(self):
-        user = mommy.make_recipe('backend.core.user')
-        self.jwt_authorization = get_jwt_token(user)
-        self.report = mommy.make_one(Report, city__name='Bom Despacho', user=user)
-
-    def test_delete_report(self):
-        """
-        DELETE at /api/v1/reports/report_id/
-        Must return status code 204 NO CONTENT
-        """
-        response = self.client.delete(reverse('report-detail', kwargs={'pk': self.report.pk}),
-                                      HTTP_AUTHORIZATION=self.jwt_authorization)
-        self.assertEqual(204, response.status_code)
-
+        jwt_authorization = get_jwt_token(self.agent_user)
+        resp = self.client.put(reverse('report-detail', kwargs={'pk': self.report.pk}), self.data,
+                               HTTP_AUTHORIZATION=jwt_authorization)
+        self.assertEqual(400, resp.status_code)
+        self.assertTrue(resp.data.serializer.errors)
+        self.assertTrue(Report.objects.get(pk=self.report.pk))
