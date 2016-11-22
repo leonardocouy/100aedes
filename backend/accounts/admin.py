@@ -1,6 +1,4 @@
 from django.contrib import admin
-from django.core.exceptions import ObjectDoesNotExist
-from django.db.models import Model
 from django.forms import PasswordInput
 
 from .models import User
@@ -33,11 +31,10 @@ class UserAdmin(admin.ModelAdmin):
         else:
             obj.set_password(obj.password)
 
-        try:
-            if form.cleaned_data['groups'].get().name == 'Coordenador':
-                obj.is_staff = True
-        except ObjectDoesNotExist:
-            pass
+        if form.cleaned_data['groups'].filter(name="Coordenador").exists():
+            obj.is_staff = True
+        else:
+            obj.is_staff = False
 
         obj.save()
 
