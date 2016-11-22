@@ -1,7 +1,7 @@
 from django.contrib.auth.models import Group
 from django.db.models import Q
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
-from .permissions import IsReportOwner
+from .permissions import IsReadOnlyOrAgent
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 from rest_framework.permissions import IsAuthenticated
 from .models import Report
@@ -29,8 +29,9 @@ class ReportCreateReadView(ListCreateAPIView):
             except Group.DoesNotExist:
                 return Report.objects.filter(user=user)
 
+
 class ReportReadUpdateDelete(RetrieveUpdateDestroyAPIView):
     queryset = Report.objects.all()
     serializer_class = ReportSerializer
-    permission_classes = (IsAuthenticated, IsReportOwner, )
+    permission_classes = (IsAuthenticated, IsReadOnlyOrAgent, )
     authentication_classes = (JSONWebTokenAuthentication, )
