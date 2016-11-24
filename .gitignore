@@ -12,7 +12,6 @@ staticfiles
 media
 .vagrant
 /node_modules
-bower_components
 npm-debug.log
 dist/
 config.json
