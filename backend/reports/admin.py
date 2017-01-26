@@ -8,13 +8,14 @@ class ReportAdmin(admin.ModelAdmin):
     list_display = ('get_first_name', 'get_phone', 'get_email', 'created_at', 'address', 'district',
                     'get_city_and_state', 'modified_at', 'status',)
     list_filter = ('status', 'city__name', 'created_at',)
-    readonly_fields = ('location', )
+    readonly_fields = ['location']
     actions = ['accept', 'reject', 'pending']
     exclude = ['Permissions']
     READ_ONLY_GROUPS = ("Agente",)
 
     def location(self, instance):
         return '<a target="_blank" href="http://maps.google.com/maps?q=loc:{},{}">Abrir localização no Google Maps</a>'.format(instance.latitude, instance.longitude)
+
     location.allow_tags = True
     location.short_description = "Localização"
 
@@ -31,6 +32,7 @@ class ReportAdmin(admin.ModelAdmin):
         return obj.city.__str__()
 
     def get_form(self, request, obj=None, **kwargs):
+        # Remove choice "Não-enviada"
         form = super(ReportAdmin, self).get_form(request, obj, **kwargs)
         form.base_fields['status'].choices.pop(0)
         return form
@@ -48,7 +50,7 @@ class ReportAdmin(admin.ModelAdmin):
     get_city_and_state.short_description = 'Cidade/UF'
 
 
-class ReadOnlyReportAdmin(ReportAdmin):
+class ReadOnlyReportAdmin(ReportAdmin): # pragma: no cover
     def __init__(self, model, admin_site):
         super(ReadOnlyReportAdmin, self).__init__(model, admin_site)
         self.model = model
@@ -62,7 +64,7 @@ class ReadOnlyReportAdmin(ReportAdmin):
     def has_change_permission(self, request, obj=None):
         if self._user_is_readonly(request):
             self.readonly_fields += [f.name for f in self.model._meta.fields]
-        return True
+        return super(ReadOnlyReportAdmin, self).has_change_permission(request)
 
     def get_actions(self, request):
         actions = super(ReadOnlyReportAdmin, self).get_actions(request)
@@ -80,6 +82,5 @@ class ReadOnlyReportAdmin(ReportAdmin):
                 if read_only_group in user_groups:
                     return True
         return False
-
 
 admin.site.register(Report, ReadOnlyReportAdmin)

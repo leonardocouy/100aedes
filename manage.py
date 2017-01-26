@@ -11,7 +11,7 @@ if __name__ == "__main__":
 
     if is_testing:
         import coverage
-        cov = coverage.coverage(source=['backend'], omit=['*/tests/*'])
+        cov = coverage.coverage(source=['backend'], include = '*.py', omit=['*/tests/*', '*wsgi.py*', '*/migrations/*', '*/settings/*', '*/locale/*'])
         cov.erase()
         cov.start()
 
